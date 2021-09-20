@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2021/Arch Linux)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: master.aux
+The style file: plain.bst
+Database file #1: thbib.bib
+Warning--empty chapter and pages in grynkiewicz_2013
+You've used 1 entry,
+            2118 wiz_defined-function locations,
+            504 strings with 4120 characters,
+and the built_in function-call counts, 262 in all, are:
+= -- 20
+> -- 7
+< -- 1
++ -- 4
+- -- 2
+* -- 16
+:= -- 49
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 3
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 13
+empty$ -- 26
+format.name$ -- 2
+if$ -- 52
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 2
+newline$ -- 8
+num.names$ -- 2
+pop$ -- 9
+preamble$ -- 1
+purify$ -- 3
+quote$ -- 0
+skip$ -- 6
+stack$ -- 0
+substring$ -- 6
+swap$ -- 2
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 2
+warning$ -- 1
+while$ -- 2
+width$ -- 2
+write$ -- 13
+(There was 1 warning)

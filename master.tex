@@ -1,0 +1,21 @@
+\documentclass[letterpaper,12pt,notitle]{memphisthesis} % If you want letter paper
+\input{./extras/preamble.tex}
+\input{./extras/ops.tex}
+\binoppenalty=9999
+\relpenalty=9999
+\begin{document}
+		\pagenumbering{roman}
+		\setcounter{page}{1}
+	\input{./extras/title.tex}
+		\doublespacing
+		\widowpenalty=10000
+	\input{./extras/acknowledgment.tex}
+	\input{./extras/abstract.tex}
+	\input{./extras/toc.tex}
+		\input{./chapters/intro.tex}
+		\input{./chapters/ch2.tex}
+		\input{./chapters/ch3.tex}
+		\input{./chapters/ch4.tex}
+	\input{./extras/bib.tex}
+%	\input{./extras/appendix.tex}
+\end{document}

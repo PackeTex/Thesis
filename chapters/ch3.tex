@@ -1,0 +1,188 @@
+%\lecture{2}{Tue 13 Jul 2021 14:09}{Chevalley-Warning Theorem and Sumsets}
+\chapter{Chevalley-Warning Theorem and Sumsets} \todo{Move Chevalley-Warning to
+its own section and proved 1-2 more statements and proofs on sumsets} Our first
+major theorem of this section concerns the theorem of Chevalley and Warning
+which declares the conditions under which a certain nontrivial solution to a
+polynomial in a finite field of characteristic $p$ can exist:
+\begin{theorem}[Chevalley-Warning Theorem] Let $F$ be a finite field of
+	characteristic $p$ and let $f_1, f_2, \ldots, f_k \in F[x_1, x_2,
+	\ldots, x_{n}]$ be polynomials and $N$ to be the number of points
+	$\textbf{x}\in F^{n}$ such that $f_1\left( \textbf{x} \right) = \ldots
+	= f_k \left( \textbf{x} \right)  = 0$. If $ \sum_{i= 1}^{k} \deg \left(
+	f_{i} \right)< n$, then $N \equiv 0 (\text{mod } p) $.  \end{theorem}
+	In order to provide a proof of this statement, let us first state and
+	prove the following lemma: \begin{lemma}[Lemma] Let $F$ be a finite
+		field and $k_1, k_2, \ldots, k_{n} \ge 0$ such that $\min _{1
+		\le i \le n} k_{i} \le \left| F \right|  - 2$. Then,
+		$\sum_{x_1, x_2, \ldots, x_{n} \in F}^{}
+		x_1^{k_1}x_2^{k_2}\ldots x_{n}^{k_{n}} = 0.$ (Note: if a
+		$0^{0}$ occurs in the expressions it will be treated as a $1$).
+		\end{lemma} \begin{proof}[Proof] Assume without loss of
+		generality that $k_1 < \left| F  \right| -1$. Then, by factoring out a $x_1^{k_1}$ from each term of the sum and grouping all such $x_1$'s, we have
+		$\sum_{x_1, x_2, \ldots, x_{n} \in F}^{}
+		x_1^{k_1}x_2^{k_2}\ldots x_{n}^{k_{n}} = \left( \sum_{x_1 \in
+		F}^{} x_1^{k_1} \right) \sum_{x_2, \ldots, x_{n} \in F}^{} x_2^{k_2}\ldots x_{n} ^{ k_{n}}$, hence we must
+		only show that $\sum_{x_1 \in F}^{} x_1^{k_1}= 0$. Suppose $k_1
+		= 0$, then $\sum_{x_1 \in F}^{}x_1^{k_1} = \left| F \right| $ and,
+		since $p$ divides  $\left|  F \right|$ we see the case $k_1 =
+		0$ is trivially true. Now, let $\omega \in F^{\times}$ be a
+		generator of $F^{\times}$. Then, we have that \[ \sum_{x_1 \in
+			F}^{}x_1 ^{ k_1} = \sum_{x_1 \in F^{\times}}^{}x_1 ^{
+		k_1} = \sum_{x_1 \in F^{\times}}^{}\left( \omega x \right) ^{
+	k_1} = \omega ^{ k_1} \sum_{x_1 \in F^{ \times}}^{} x_1 ^{ k_1}= \omega
+^{ k_1}\sum_{x_1 \in F}^{}x_1 ^{ k_1} .\] Taking the difference of the first and last terms of the above equality yields $\left(
+	\omega ^{ k_1} - 1 \right) \left( \sum_{x_1 \in F}^{} x_1 ^{
+	k_1}\right) = 0$, so we must have either the sum is $0$ or $\omega
+	^{k_1} -1 = 0$. However, as $\omega$ is a generator of the cyclic group
+	$F^{ \times}$, we may only have that $\omega ^{ k_1} = 1$ if $k_1
+\equiv -1 \left( \text{mod } \left| F \right|  \right) $.  But, as $0 < k_1 <
+\left| F \right| -1$ this case cannot occur, hence we see $\sum_{x_1 \in F}^{}
+x_1 ^{ k_1} = 0$, so the lemma is proven.  \end{proof} \begin{proof}[Proof of
+Chevalley-Warning Theorem] Recalling that $x^{\left|  F \right| } = x$ (and
+thus $x^{\left| F \right| -1} = 1$ for nonzero $x$). Then, define  \[ M =
+	\sum_{\textbf{x} \in F^{n}}^{} \prod_{i= 1}^{k} \left( 1 - f_{i}\left(
+\textbf{x} \right) ^{\left| F \right| -1} \right) .\] We see, by the earlier
+proposition, that a term of the sum will be $1$ if and only if $\textbf{x}$ is
+a solution to the system $f_1, f_2, \ldots, f_{k}$, else it will be $0$.
+Furthermore, it is clear by the construction that $M$ will be exactly equal to
+the number of solutions to our system $f_1, \ldots, f_{k}$, and hence it
+precisely $N$.\\ Now, let us define the product from our construction to be a
+polynomial  $g$, that is $g\left( \textbf{x} \right) = \prod_{i= 1}^{k} \left(
+	1-f_{i}\left( \textbf{x} \right) ^{\left| F \right| -1} \right)$. Then,
+	repeatedly applying the substitution $ x_{j}^{\left| F \right| } \to
+	x_{j}$ to $g$ yields a polynomial $\overline{g} = g$ for all
+	$\textbf{x}\in F^{n}$. Furthermore, $ \deg _{ x_j} \left(  \overline{g}
+	\right) \le \left| F \right| -1$ for $1 \le j \le n$(This is clear as ,
+	if it were not we would be able to apply the substitution once again).
+	Then, substituting $\overline{g}$ in place of $g$ yields \[ M =
+	\sum_{\textbf{x } \in F^{n}}^{} \overline{g}\left( \textbf{x} \right)
+.\] Then, applying our lemma, we see that all monomials with degree $\left| F
+\right|  -2$ or less will equal $0$ and hence the only possible nonzero terms
+of $\overline{g}$ are those of the form $ \prod_{i= 1}^{n}  x_{i}^{\left| F
+\right| -1}$. Expanding the product, we see that such a monomial would be of
+degree $n\left(\left| F \right| - 1 \right)$, however as $\deg f_{i} ^{\left| F
+\right| -1} = \left( \left| F \right| -1 \right) \deg \left( f_{i} \right)$, we
+see that $\deg \left( g \right) \le \left( \left| F \right| -1 \right) \sum_{i=
+1}^{k} f_{i} < n\left( \left| F \right| -1 \right)$ by construction.
+Consequently, any such monomial of $\overline{g}$ (and hence $g$) will have a
+zero coefficient, and thus $M = N \equiv 0 \left( \text{mod } p \right) $.
+\end{proof} This theorem allows us to prove certain constraints (and in the
+case of prime  $p$, the exact value) on the size of the davenport constant for
+a certain group. This result is too advanced for now, but we will return to it
+later. Next, let us examine theorems concerning sumsets such as the
+Cauchy-Davenport Theorem and the Erdős-Heilbronn conjecture on the lower bound
+of the size of sumsets.\ \begin{theorem}[Cauchy-Davenport Theorem] Given a
+	prime $p$ and nonempty $A,B \subseteq Z_{p}$, then $\left| A + B
+	\right| \ge \min \left\{ p, \left| A \right|  + \left| B \right|  -1
+	\right\} $.  \end{theorem} \begin{proof}[Proof] Suppose $\left| A
+	\right| + \left| B \right| > p$, we must have that for any element $x
+	\in Z_p$, $\left( A \right) \cap \left( x \setminus B \right) \neq \O$
+	(As there are only $p$ possible elements which could be in each set).
+	Hence, $A + B = Z_p$. Thus, let us assume $\left| A \right|  + \left| B
+	\right| \le p$ and suppose indirectly that $\left| A+B \right| \le
+	\left| A \right| + \left| B \right| -2$. Let $A+B \subseteq C \subseteq
+	Z_p$ such that $\left| C \right| = \left| A \right|  + \left| B \right|
+	-2$. Next, define $f\left( x,y \right)  = \prod_{c \in C}^{} \left( x +
+	y - c \right) $ and note that we must have $f\left( a,b \right)  = 0$
+	for all $\left( a,b \right)  \in A \times B$ as $A,B \subseteq C$. Now, note
+	that $\deg \left( f \right) = \left| C \right| = \left| A \right|  +
+	\left| B \right|  -2$, and hence $[x^{\left| A \right| -1}y ^{\left| B
+	\right| -1}]f\left( x,y \right) = \binom{\left| A \right| + \left| B
+\right|  -2}{\left| A \right| -1} \neq 0$ as $\left| A \right| -1 < \left| A
+\right|  + \left| B \right| -2 < p$. Hence, by the Combinatorial
+Nullstellensatz (Theorem 1.2), we must have a pair $\left( a,b \right)  \in A
+\times B$ such that $f\left( a,b \right) \neq 0$ $\lightning$. Thus, the theorem must be true.
+\end{proof} With this basic theorem about
+sumsets proven, we now take a look at restricted sumsets, those being sumsets
+where a sum is excluded if it satisfies a certain property, normally being the
+root of a particular polynomial.  \begin{notation}[Restricted Sumset] For a
+	polynomial $h \left( x_0, x_1, \ldots, x_{k} \right) $ and subsets
+	$A_0, A_1, \ldots, A_{k} \subseteq Z_p$ define \[ \oplus _h
+	\sum_{i=0}^{k} A_{i} = \left\{ a_0 + a_1 + \ldots + a_{k} : a_{i} \in
+A_{i}, h\left( a_0, a_1, \ldots, a_{k} \right) \neq 0 \right\} \] to be the
+restricted sumset over the $A_{i}$s with respect to $h$.  \end{notation}
+\begin{theorem}[General Restricted Sumset Theorem] For a prime $p$ and a
+	polynomial $h\left( x_0, .., x_{k} \right)$ over $Z_p$ and nonempty
+	$A_0, A_1, \ldots, A_{k} \subseteq Z_p$, define  $c_{i} = \left| A_{i}
+	\right| -1$ and $m = \sum_{i=0}^{k} c_{i} - \deg \left( h \right)$.\\
+	If $[x_0^{c_0}\ldots x_{k}^{c_{k}}]((\sum_{i=0}^{k} x_{i})^{m} \cdot
+	h\left( \textbf{x} \right) ) \neq 0$, then \[ \left|  \oplus _h
+		\sum_{i=0}^{k}  A_{i} \right| \ge m+1 \ \text{ (consequently m
+		< p)} .\] \end{theorem} \begin{proof}[Proof] Suppose indirectly
+		that the inequality does not hold (and hence $m \ge p$), then
+		we may define $E \subseteq Z_p$ such that $E$ is a multi-set
+		containing $m$ elements and $\oplus_h \sum_{i=0}^{k} A_{i}
+		\subseteq E$. Let $Q\left( \textbf{x} \right) = h\left(
+			\textbf{x} \right) \prod_{e \in E}^{}  \left(
+			\sum_{i=0}^{k} x_{i} - e \right)  $.  By our
+			construction we must have that $Q\left( \textbf{x}
+			\right)  = 0$ for all $\textbf{x} \in \prod_{i=0}^{k}
+			A_{i}$ as either $h\left( \textbf{x} \right)  = 0$ or
+			$\sum_{i=0}^{k} x_{i} \in \oplus_h \sum_{i=0}^{k}
+			A_{i} \subseteq E$. Furthermore $\deg \left( Q \right)
+			= m + \deg \left( h \right) = \sum_{i=0}^{k} c_{i}$ by
+			construction. From this we see $m \ge \sum_{i=0}^{k}
+			c_{i}$ and hence $[x_0^{c_0}\ldots c_{k}^{c_{k}}] Q
+			\neq 0$ (as it is binomial in nature).\\ Therefore,
+			applying Combinatorial Nullstellenstaz (Theorem 1.2)
+			yields an $ \textbf{a}\in A$ such at $Q\left(
+			\textbf{a} \right) \neq 0 $ $\lightning$. Thus $m < p$
+			and $\left| \oplus _ h \sum_{i=0}^{k}  A_{i}  \right|
+			\ge m+1$.  \end{proof} With this powerful result proven
+			let us now take specific functions for $h$ and prove
+			superior lower bounds where possible. First, we examine
+			the function $h\left( a_0, \ldots, a_{k} \right)  =
+			\prod_{0\le i < j \le n}^{} \left( a_{i} - a_{j}
+			\right) $: \begin{theorem}[Restricted Sumset Theorem]
+				For a prime $p$, nonempty $A_0, A_1, \ldots,
+				A_{k} \subseteq Z_p$ with  $\left| A_{i}
+				\right| \neq \left| A_{j} \right| $ for any $i
+				\neq j$ and for the $h$ defined above. If
+				$\sum_{i=0}^{k} \left| A_{i} \right| \le p +
+				\binom{k+2}{2} -1$, then \[ \left| \oplus_h
+				\sum_{i=0}^{k} A_{i} \right| \ge \sum_{i=0}^{k}
+			\left| A_{i} \right| - \binom{k+2}{2} + 1 .\]
+		\end{theorem} A special case of this theorem for only two sets
+		is the following: \begin{theorem}[Erdős-Heilbronn Conjecture]
+			For a prime $p$ and nonempty $A,B \subseteq Z_{p}$,
+			then $\left| A \oplus_{h} B \right| \ge \min \left\{ p,
+			\left| A \right|  + \left| B \right|  - \delta \right\}
+			$ where $\delta = 3$ for  the case $A = B$ and $\delta
+			= 2$ in all other cases.  \end{theorem} In order to
+			prove these theorems, let us first state and prove a
+			lemma concerning the coefficient of a particular
+			polynomial: \begin{lemma}[] Let $0 \le c_0, \ldots,
+				c_{k} \in \Z$ and define $m = \sum_{i=0}^{k}
+				c_{i} - \binom{k+1}{2}$ (it is trivial that $m$
+				is nonnegative). Then,\[[x_0^{c_0}\ldots
+				x_{k}^{c_{k}}] \left( \left( \sum_{i=0}^{k}
+			x_{i} \right) ^{m} \prod_{k \ge i > j \ge 0}^{} \left(
+x_{i} - x_{j} \right)  \right) = \frac{m!}{c_0! c_1! \ldots c_{k}!} \prod_{k
+\ge i > j \ge 0}^{} \left( c_{i} - c_{j} \right).\] \end{lemma} \todo{Provide
+proof of this lemma based on proof of Ballot problem} With this out of the way,
+we now prove proposition 2.4: \begin{proof}[Proof of Restricted Sumset Theorem]
+	For this proof we will take the aforementioned \[ h\left( \textbf{x}
+		\right) = \prod_{0\le i < j \le k}^{} \left( x_{i} - x_{j}
+	\right) .\] Now, let us define $c_{i} = \left| A_{i} \right|  -1$ and
+	$m = \sum_{i=0}^{k} c_{i} - \binom{k+1}{2}$. Rearranging the
+	assumptions of this theorem yields $\sum_{i=0}^{k} \left| A_{i} \right|
+	- \binom{k+2}{2} + 1 \le p$ and, applying the trivial combinatorial
+	identity $\binom{k+2}{2} =  \binom{k+1}{2} +  (k+1)$ yields \\
+	$\sum_{i=0}^{k} c_{i} - \binom{k+1}{2} + 1 = m + 1 \le p$ (hence $m <
+	p$). Then  \[ [x_0^{c_0}\ldots x_{k}^{c_{k}}]\left( \left(
+	\sum_{i=0}^{k} x_{i} \right) h \right) =  \frac{m!}{c_0! \ldots
+	c_{k}!}\prod_{0 \le i < j \le k}^{} \left( c_{i} - c_{j} \right) .\] We
+	know this product to be nonzero modulo  $p$ as  $c_{i} \neq c_{j}$  for
+	$i \neq j$ by construction and $m < p$. Finally, as the coefficient is
+	nonzero and as $\deg \left( h \right) =  \binom{k+2}{2}$ (as there are
+	$k+2$ possible $x_{i}$'s and each term of the product will contain two
+	distinct $x_{i}$'s so there are $\binom{k+2}{2}$ terms each of degree
+	$1$), we have $m = \sum_{i=0}^{k} c_{i} - \deg \left( h \right)$
+	\todo{Ask grynkiewicz about this as Alons paper says $+ \deg \left( h
+	\right)$ instead of minus}. Hence, applying theorem 2.3 yields  $\left|
+	\oplus _h \sum_{i= 0}^{k}  A_i \right| \ge m + 1 = \sum_{i=0}^{k}
+	\left| A_{i} \right| - \binom{k+2}{2}+1$ by construction.  \end{proof}
+We conclude this section with the proof of the Erdős-Heilbronn Conjecture:
+\begin{proof}[Proof of Erdős-Heilbronn Conjecture]
+	\todo{Add proof}
+\end{proof}
