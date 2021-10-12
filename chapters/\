@@ -1,0 +1,38 @@
+%\lecture{3}{Thu 15 Jul 2021 12:57}{Lagrange Interpolation, Zero-Sum Sequences, and the q-Dyson Theorem}
+\chapter{Zero-Sum Sequences, and the q-Dyson Theorem}
+Let us begin with some notation:
+\begin{notation}[Subpower]
+	For a given independent variable $q$, define \[
+		\left( x \right) _{k} = \left( 1-x \right) \left(  1-xq \right) \left( 1-xq^2 \right) \ldots \left( 1-xq^{k-1} \right)
+	.\] 	For simplicity, define $\left( t \right) _{0} = 1$.
+\end{notation}
+The following theorems, concerned with the constant term of a particular laurent polynomial, serve to further demonstrate the power of our previous results. The special case $q=1$ yields the Dyson conjecture:
+\begin{theorem}[Dyson Conjecture]
+	\[
+		[x_1^{0}\ldots x_{n}^{0}]\left( \prod_{1\le i < j \le n}^{}  \left( 1- \frac{x_{i}}{x_{j}} \right)^{a_{i}}  \right)  = \frac{\left( \sum_{i= 1}^{n} a_{i} \right) ! }{\prod_{i= 1}^{n} \left( a_{i}! \right)}
+	.\]
+\end{theorem}
+This case, originally proven by Gunson and Wilson using lagrange interpolation yields the following generalization:
+\begin{theorem}[q-Dyson Conjecture]
+	First, let us define the following polynomial:
+	\[
+		f_{q}\left( \textbf{x} \right) = f_{q}\left( x_1, x_2, \ldots, x_{n} \right) \coloneqq \prod_{1\le i < j \le n}^{} \left( \frac{x_{i}}{x_{j}} \right) _{a_{i}} \left( \frac{qx_{j}}{x_{i}} \right) _{a_{j}}
+	.\]
+	Then,  \[
+		[x_1^{0}\ldots x_{n}^{0}]f_{q}\left( \textbf{x} \right)  = \frac{\left( q \right) _{\sum_{i= 1}^{n} a_{i}}}{\prod_{j= 1}^{n} \left( q \right) _{a_{j}}}
+	.\]
+\end{theorem}
+\begin{proof}
+	First, we note that if \(a_{i} = 0\), then \(\left( x \right) _{a_{i}} = \left( 1-x \right) \), hence we may omit all of these terms as they will not affect the constant. Hence, we know each (relevant) \(a_{i}\) is a positive integer. Let \[
+		F\left( \textbf{x} \right) = \prod_{1 \le i < j \le n}^{} \left( \prod_{i=0}^{a_{i} - 1} \left( x_{j} - x_{i}q^{t} \right) \cdot \prod_{t=1}^{a_{j}} \left( x_{i} - x_{j}q^{t} \right)  \right)
+	.\]
+	 Denote \(\kappa = \frac{1}{\prod_{1 \le i < j \le n}^{} x_{i}^{a_{j}} x_{j} ^{a_{i}}}\). Then, we see
+	\begin{align*}
+		f_{q}\left( x_1, x_2, \ldots, x_{n} \right)  &= \prod_{1 \le i < j \le n}^{} [\prod_{k= 1}^{a_{i}}\left( 1 - \frac{x_{i}}{x_{j}}q^{k - 1} \right) \prod_{k=1}^{a_{j}} \left( 1 - \frac{x_{j}}{x_{i}} q^{k} \right)] \\
+				       &= \prod_{1 \le i < j \le n}^{}  \frac{1}{x_{j}^{a_{i}} x_{i} ^{a_{j}}} [\prod_{k=1}^{a_{i}}\left( x_{j} - x_{i}q^{k-1} \right) \prod_{i= 1}^{a_{j}} \left( x_{i} - x_{j}q^{k} \right)]   \\
+				       &= \dfrac{1}{\prod_{1 \le i < j \le n}^{} x_{i}^{a_{j}} x_{j}^{a_{i}}} \underbrace{\prod_{1 \le i < j \le n}^{} [\prod_{k=1}^{a_{i}} \left( x_{j} - x_{i}q^{k-1} \right) \prod_{k= 1}^{a_{j}}\left( x_{i} - x_{j}q^{k} \right) ]}_{= F\left( x_1, x_2, \ldots, x_{n} \right) } \\
+				       &= \kappa \prod_{1 \le i < j \le n}^{}\left( x_{j}^{a_{i}} + \beta _{i} \right) \left( x_{i}^{a_{j}} + \beta _{j} \right)   \\
+				       &= \kappa \prod_{1 \le i < j \le n}^{} (x_{j}^{a_{i}}x_{i}^{a_{j}} + \beta_{ij}) \\
+				       &= c \kappa (\prod_{1 \le i < j \le n}^{} x_{j}^{a_{i}} x_{i}^{a_{j}}) + \beta \\
+	\end{align*}, where \(\beta_{i}, \beta_{j}, \beta_{ij} , \beta\)  are all of the lower order terms from their respective product.  We see the first term is simply a constant, and we see as the exponent of \(x_{i}\) will take on all values, \(a_{k}\), except \(a_{i}\) and similarly, the exponent of \(x_{j}\) will take on all values except \(a_{j}\). Hence, we find \(\left[ 1 \right] f_{q}\left( \textbf{x} \right) = \left[ \prod_{i= 1}^{n} x_{i}^{\sum_{k = 1}^{n} a_{k} - a_{i}} \right]F\left( \textbf{x} \right)   \).
+\end{proof}
