@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.7.10)  13 SEP 2021 09:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.7.10)  12 OCT 2021 11:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -480,34 +480,11 @@ Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ) (/usr/share/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
 Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
-)) (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
-\f@nch@headwidth=\skip129
-\f@nch@O@elh=\skip130
-\f@nch@O@erh=\skip131
-\f@nch@O@olh=\skip132
-\f@nch@O@orh=\skip133
-\f@nch@O@elf=\skip134
-\f@nch@O@erf=\skip135
-\f@nch@O@olf=\skip136
-\f@nch@O@orf=\skip137
-)
-
-Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 166.
-
-
-Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 167.
-
-
-Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 169.
-
-
-Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 170.
-
-(/usr/share/texmf-dist/tex/latex/todonotes/todonotes.sty
+)) (/usr/share/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2020/08/18 v1.1.3 Todonotes source and documentation.
 Package: todonotes 2018/11/22
- (/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+
+(/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
  (/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks32
@@ -576,8 +553,7 @@ Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
 \pgfmath@toks=\toks41
 \pgfmath@stack@operand=\toks42
 \pgfmath@stack@operation=\toks43
-) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count320
 )) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
@@ -647,10 +623,10 @@ File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ))) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfnodeparttextbox=\box111
-)
-(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@nodesepstart=\dimen283
 \pgf@nodesepend=\dimen284
@@ -810,56 +786,56 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ) (/usr/share/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 \c@r@tfl@t=\count361
-\rotFPtop=\skip138
-\rotFPbot=\skip139
+\rotFPtop=\skip129
+\rotFPbot=\skip130
 \rot@float@box=\box129
 \rot@mess@toks=\toks51
 ) (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip140
+\multirow@colwidth=\skip131
 \multirow@cntb=\count362
-\multirow@dima=\skip141
+\multirow@dima=\skip132
 \bigstrutjot=\dimen309
 ) (/usr/share/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
 \c@AlgoLine=\count363
-\algocf@hangindent=\skip142
+\algocf@hangindent=\skip133
  (/usr/share/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
 \c@checkoddpage=\count364
 ) (/usr/share/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip143
-\skiplinenumber=\skip144
-\skiprule=\skip145
-\skiphlne=\skip146
-\skiptext=\skip147
-\skiplength=\skip148
-\algomargin=\skip149
-\skipalgocfslide=\skip150
+\skiptotal=\skip134
+\skiplinenumber=\skip135
+\skiprule=\skip136
+\skiphlne=\skip137
+\skiptext=\skip138
+\skiplength=\skip139
+\algomargin=\skip140
+\skipalgocfslide=\skip141
 \algowidth=\dimen310
 \inoutsize=\dimen311
 \inoutindent=\dimen312
 \interspacetitleruled=\dimen313
 \interspacealgoruled=\dimen314
 \interspacetitleboxruled=\dimen315
-\algocf@ruledwidth=\skip151
+\algocf@ruledwidth=\skip142
 \algocf@inoutbox=\box130
 \algocf@inputbox=\box131
-\AlCapSkip=\skip152
-\AlCapHSkip=\skip153
-\algoskipindent=\skip154
+\AlCapSkip=\skip143
+\AlCapHSkip=\skip144
+\algoskipindent=\skip145
 \algocf@nlbox=\box132
 \algocf@hangingbox=\box133
 \algocf@untilbox=\box134
-\algocf@skipuntil=\skip155
+\algocf@skipuntil=\skip146
 \algocf@capbox=\box135
-\algocf@lcaptionbox=\skip156
-\algoheightruledefault=\skip157
-\algoheightrule=\skip158
-\algotitleheightruledefault=\skip159
-\algotitleheightrule=\skip160
+\algocf@lcaptionbox=\skip147
+\algoheightruledefault=\skip148
+\algoheightrule=\skip149
+\algotitleheightruledefault=\skip150
+\algotitleheightrule=\skip151
 \c@algocfline=\count365
 \c@algocfproc=\count366
 \c@algocf=\count367
@@ -979,15 +955,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 
 (./extras/title.tex [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./extras/acknowledgment.tex) (./extras/abstract.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[1]) (./extras/toc.tex [2] (./master.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./extras/acknowledgment.tex) (./extras/abstract.tex [1]) (./extras/toc.tex [2] (./master.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1009,211 +977,65 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 2.
 
 ]
 Chapter 1.
-) (./chapters/ch2.tex
-Overfull \hbox (14.29913pt too wide) in paragraph at lines 4--4
-[][][]\T1/ptm/m/n/12 Capitalize 
- []
-
-
-Overfull \hbox (14.29913pt too wide) in paragraph at lines 4--4
-[][][]\T1/ptm/m/n/12 Capitalize 
- []
-
-
-Overfull \hbox (34.97516pt too wide) in paragraph at lines 6--6
-\T1/ptm/m/n/12 sums/products 
- []
-
-
-Overfull \hbox (30.9673pt too wide) in paragraph at lines 6--6
-\T1/ptm/m/n/12 play/equation 
- []
-
-
-Overfull \hbox (34.97516pt too wide) in paragraph at lines 6--6
-\T1/ptm/m/n/12 sums/products 
- []
-
-
-Overfull \hbox (30.9673pt too wide) in paragraph at lines 6--6
-\T1/ptm/m/n/12 play/equation 
- []
-
 [1
 
-]
-
-LaTeX Warning: Marginpar on page 2 moved.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[2]
+]) (./chapters/ch2.tex [2]
 Chapter 2.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 6.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 15.
 [3
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 33.
-
-Overfull \hbox (4.34184pt too wide) in paragraph at lines 34--50
-\T1/ptm/m/n/12 main, and let $\OML/cmm/m/it/12 A[]; A[]; [] ; A[] \OMS/cmsy/m/n/12 ^^R \OML/cmm/m/it/12 R$ \T1/ptm/m/n/12 be fi-nite and nonempty. Let $\OML/cmm/m/it/12 f [] \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 R\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 x[]; x[]; [] ; x[]\OT1/cmr/m/n/12 ]$
- []
-
-
-Overfull \hbox (8.1314pt too wide) in paragraph at lines 34--50
-\OML/cmm/m/it/12 g[] [] \OT1/cmr/m/n/12 = [][] [] \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 R\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 ]$ \T1/ptm/m/n/12 for $\OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 i \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 n$\T1/ptm/m/n/12 . Then, we have that $\OML/cmm/m/it/12 f [] \OT1/cmr/m/n/12 =
- []
-
+(mdframed)              on input line 52.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 66.
+ (/usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [4] [5]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 51.
-
-Overfull \hbox (28.86484pt too wide) in paragraph at lines 52--58
-[]\T1/ptm/b/n/12 Lemma 2.0.1. []\T1/ptm/m/n/12 Let $\OML/cmm/m/it/12 R$ \T1/ptm/m/n/12 be an in-te-gral do-main, $\OML/cmm/m/it/12 f [] \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 R\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 x[]; x[]; [] ; x[]\OT1/cmr/m/n/12 ]$\T1/ptm/m/n/12 , and $\OML/cmm/m/it/12 A[]; A[]; [] ; A[] \OMS/cmsy/m/n/12 ^^R
- []
-
-
-Overfull \hbox (34.8398pt too wide) in paragraph at lines 52--58
-\OML/cmm/m/it/12 R$ \T1/ptm/m/n/12 be fi-nite and nonempty. Sup-pose $[][] \OML/cmm/m/it/12 f < []$ \T1/ptm/m/n/12 for each $\OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 i \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 n$ \T1/ptm/m/n/12 and $\OML/cmm/m/it/12 f [] \OT1/cmr/m/n/12 =
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[4]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[5]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[6]
+(mdframed)              on input line 122.
+ [6] [7] [8]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 149.
-
-Overfull \hbox (42.94264pt too wide) in paragraph at lines 149--152
-[]\T1/ptm/b/n/12 Theorem 2.0.2 \T1/ptm/m/n/12 (Com-bi-na-to-rial Null-stel-len-satz)\T1/ptm/b/n/12 . []\T1/ptm/m/n/12 Let $\OML/cmm/m/it/12 R$ \T1/ptm/m/n/12 be an in-te-gral do-main, $\OML/cmm/m/it/12 A[]; A[]; [] ; A[] \OMS/cmsy/m/n/12 ^^R
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[7]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[8]
+(mdframed)              on input line 168.
+ [9]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 192.
+(mdframed)              on input line 194.
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--203
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 192--203
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[9]
-Overfull \hbox (0.96762pt too wide) in paragraph at lines 216--216
-[][][]\T1/ptm/m/n/12 include 
- []
-
-
-Overfull \hbox (0.96762pt too wide) in paragraph at lines 216--216
-[][][]\T1/ptm/m/n/12 include 
- []
-
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 217.
-
-Overfull \hbox (30.42435pt too wide) in paragraph at lines 235--245
+Overfull \hbox (30.42435pt too wide) in paragraph at lines 212--222
 [][] [] \OT1/cmr/m/n/12 + [][] [] \OMS/cmsy/m/n/12 ^^T [][] []$ \T1/ptm/m/n/12 for $\OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 i; j \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 n$\T1/ptm/m/n/12 . Con-se-quently $[][] [] \OMS/cmsy/m/n/12 ^^T
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[10]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[11]
-Overfull \hbox (2.31161pt too wide) in paragraph at lines 282--282
+[10] [11]
+Overfull \hbox (2.31161pt too wide) in paragraph at lines 259--259
 \T1/ptm/m/n/12 Simeon 
  []
 
 
-Overfull \hbox (27.31941pt too wide) in paragraph at lines 282--282
+Overfull \hbox (27.31941pt too wide) in paragraph at lines 259--259
 \T1/ptm/m/n/12 Grynkiewicz 
  []
 
 
-Overfull \hbox (2.31161pt too wide) in paragraph at lines 282--282
+Overfull \hbox (2.31161pt too wide) in paragraph at lines 259--259
 \T1/ptm/m/n/12 Simeon 
  []
 
 
-Overfull \hbox (27.31941pt too wide) in paragraph at lines 282--282
+Overfull \hbox (27.31941pt too wide) in paragraph at lines 259--259
 \T1/ptm/m/n/12 Grynkiewicz 
  []
 
 ) (./chapters/ch3.tex
 
 LaTeX Warning: Marginpar on page 12 moved.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [12]
 Chapter 3.
@@ -1245,30 +1067,14 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 14.
 [13
 
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[14]
+] [14]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 74.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 104.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[15]
+ [15]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 136.
@@ -1280,13 +1086,6 @@ Overfull \hbox (12.61588pt too wide) in paragraph at lines 137--142
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 146.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [16]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1321,22 +1120,7 @@ Overfull \hbox (12.46938pt too wide) in paragraph at lines 182--182
 \OT1/cmr/m/n/12 + [] []$ 
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[17]) (./chapters/ch4.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[18]
+[17]) (./chapters/ch4.tex [18]
 Chapter 4.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1346,30 +1130,36 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 16.
 [19
 
-]) (./extras/bib.tex
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 26.
+ [20] [21]
+Overfull \hbox (27.44733pt too wide) detected at line 67
+[]
+ []
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+[22]
+Overfull \hbox (60.22626pt too wide) detected at line 82
+[]
+ []
 
-[20] (./master.bbl)) [21
+[23] [24]) (./extras/bib.tex [25] (./master.bbl)) [26
 
 ] (./master.aux) ) 
 Here is how much of TeX's memory you used:
- 23506 strings out of 478994
- 452925 string characters out of 5864751
- 775689 words of memory out of 5000000
- 40431 multiletter control sequences out of 15000+600000
- 428874 words of font info for 72 fonts, out of 8000000 for 9000
+ 23364 strings out of 478994
+ 451026 string characters out of 5864751
+ 778622 words of memory out of 5000000
+ 40289 multiletter control sequences out of 15000+600000
+ 429188 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 107i,12n,105p,529b,1002s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master.pdf (25 pages, 210485 bytes).
+ 107i,18n,105p,1072b,1004s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on master.pdf (30 pages, 245279 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
+ 197 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

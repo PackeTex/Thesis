@@ -7,16 +7,21 @@
 \setcounter{subsection}{0}
 \setcounter{page}{1}
 
-This is my introduction.
+Central to mathematics, the fields of Combinatorics and Number Theory seek to answer discrete problems and often employ counting arguments. Merging these fields yields Combinatorial Number Theory, also known as Additive Combinatorics. This branch of mathematics aims to prove results pertaining to sums over sequences and interpret these results to answer questions in seemingly unrelated areas. One of these methods employs a very powerful theorem from Combinatorics, the Combinatorial Nullstellensatz. This tool, and a few others collectively called the polynomial method, seek to place limits on the kernel of a particular polynomial. We begin by presenting a few results from Combinatorics that will be needed for later problems. These are generally very short proofs to prove non-obvious results.
 
-
+\section{Notation}
+\begin{enumerate}
+	\item For a polynomial \(f\left( x_1,\ldots, x_{n} \right) \in R\left[ x_1, \ldots, x_{n} \right]  \) denote the coefficient of the monomial term \(\prod_{i= 1}^{n} x_{i}^{k_{i}}\), \(k_{i} \in \Z\) to be \(\left[ x_1^{k_1}x_2^{k_2}\ldots x_{n}^{k_{n}} \right] f\left( x_1, \ldots, x_{n} \right)   \). That is \[
+		f\left( x_1, \ldots, x_{n} \right) = \sum_{k_1, \ldots, k_{n} \in \Z}^{} \left( \left[ x_1^{k_1}\ldots x_{n}^{k_{n}} \right]f\left( x_1, \ldots, x_{n} \right)  \right) x_1^{k_1}\ldots x_{n}^{k_{n}} 	.\]
+	\item For a polynomial \(f\left( x_1, \ldots, x_{n} \right) \), we will sometimes just write \(f\left( \textbf{x} \right) \) when it is non-ambiguous.
+\item We define \(\deg \left( f \right)\) normally and \( \deg_{x_{i}} \left(  f \right)\) to be the degree of \(f\) in the variable \(x_{i}\) alone.
+\item \begin{align*}
+		\left( x \right)_{0} &\coloneqq 1 ,&\ \left( x \right) _{k} &\coloneqq \left( 1-x \right) \left( 1-xq \right) \left( 1-xq^2 \right) \ldots \left( 1-xq^{k-1} \right)
+		.\end{align*}
+	\item Denote \(\left( x \right) _{k} = \prod_{i=0}^{k-1} \left( 1-xq^{k-1} \right) \) for an independent variable \(q\) to be the subpower of \(x\) with respect to \(q\). We define \(\left( x \right) _{0} = 1\).
+\end{enumerate}
 \section{Background}
-
-\blindtext
-
-\subsection{Problems}
-
-\blindtext
-
-\section{Research Objectives}
-\blindtext
+\begin{enumerate}
+	\item A univariate polynomial, \(f : \R \to \R\) with \(\deg \left( f \right)  = n\) can have at most \(n\) real roots. This is a direct corollary of the Fundamental theorem of algebra.
+		\item jjjk
+\end{enumerate}

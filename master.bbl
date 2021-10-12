@@ -1,9 +1,20 @@
 \begin{thebibliography}{1}
 
+\bibitem{alon_1999}
+Noga Alon.
+\newblock Combinatorial nullstellensatz.
+\newblock {\em Combinatorics, Probability and Computing}, 8(1-2):7–29, 1999.
+
 \bibitem{grynkiewicz_2013}
 David~J. Grynkiewicz.
 \newblock {\em The Polynomial Method: The Erdos:Heilbronn Conjecture},
   volume~30.
 \newblock Springer, 2013.
+
+\bibitem{qdyson_2014}
+Gyula Károlyi and Zoltán Nagy.
+\newblock A simple proof of the zeilberger–bressoud q-dyson theorem.
+\newblock {\em Proceedings of the American Mathematical Society},
+  142(9):3007–3011, Sep 2014.
 
 \end{thebibliography}

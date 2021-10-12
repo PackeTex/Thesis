@@ -1,19 +1,19 @@
 %\lecture{3}{Thu 15 Jul 2021 12:57}{Lagrange Interpolation, Zero-Sum Sequences, and the q-Dyson Theorem}
-\chapter{Zero-Sum Sequences, and the q-Dyson Theorem}
-Let us begin with some notation:
+\chapter{Zeilberger-Bressoud q-Dyson Theorem}
+The previous results have all been relatively simple applications of the Combinatorial Nullstellensatz. Now, we show its use in a more complex proof. We will construct a generalized laurent polynomial based on the subpower and prove the exact value of its constant term. To begin, recall the subpower,
 \begin{notation}[Subpower]
 	For a given independent variable $q$, define \[
 		\left( x \right) _{k} = \left( 1-x \right) \left(  1-xq \right) \left( 1-xq^2 \right) \ldots \left( 1-xq^{k-1} \right)
-	.\] 	For simplicity, define $\left( t \right) _{0} = 1$.
+	.\] 	For simplicity, define $\left( x \right) _{0} = 1$.
 \end{notation}
-The following theorems, concerned with the constant term of a particular laurent polynomial, serve to further demonstrate the power of our previous results. The special case $q=1$ yields the Dyson conjecture:
+Now, let us state the Dyson conjecture, though we will not prove it as its result will follow directly from the \(q = 1\) case of our main theorem.
 \begin{theorem}[Dyson Conjecture]
 	\[
 		[x_1^{0}\ldots x_{n}^{0}]\left( \prod_{1\le i < j \le n}^{}  \left( 1- \frac{x_{i}}{x_{j}} \right)^{a_{i}}  \right)  = \frac{\left( \sum_{i= 1}^{n} a_{i} \right) ! }{\prod_{i= 1}^{n} \left( a_{i}! \right)}
 	.\]
 \end{theorem}
-This case, originally proven by Gunson and Wilson using lagrange interpolation yields the following generalization:
-\begin{theorem}[q-Dyson Conjecture]
+A direct generalization of this, the \(q\)-Dyson conjecture follows:
+\begin{theorem}[q-Dyson Conjecture \cite{qdyson_2014}]
 	First, let us define the following polynomial:
 	\[
 		f_{q}\left( \textbf{x} \right) = f_{q}\left( x_1, x_2, \ldots, x_{n} \right) \coloneqq \prod_{1\le i < j \le n}^{} \left( \frac{x_{i}}{x_{j}} \right) _{a_{i}} \left( \frac{qx_{j}}{x_{i}} \right) _{a_{j}}
@@ -22,9 +22,76 @@ This case, originally proven by Gunson and Wilson using lagrange interpolation y
 		[x_1^{0}\ldots x_{n}^{0}]f_{q}\left( \textbf{x} \right)  = \frac{\left( q \right) _{\sum_{i= 1}^{n} a_{i}}}{\prod_{j= 1}^{n} \left( q \right) _{a_{j}}}
 	.\]
 \end{theorem}
+Before we can prove this result, we must examine a related function and prove a result about its coefficients.
+\begin{lemma}
+	Let \(\mathbb{F}\) be a field and \(F \in \mathbb{F}\left[ x_1, \ldots, x_{n} \right] \) to be a polynomial of degree \(d  \le \sum_{i= 1}^{n} d_{i}\). For arbitrary \(A_1, \ldots, A_{n} \subseteq F\) with \(\left| A_{i} \right| = d_{i} + 1 \) for each \(1 \le i \le n\), we find \[\left[ \prod_{i=1}^{n} x_{i}^{d_{i}} \right] F = \sum_{c_1 \in A_1, c_2 \in A_2, \ldots, c_{n} \in A_{n} }^{} \frac{F\left( c_1, c_2, \ldots, c_{n} \right) }{ \phi_1 ^{\prime}\left( c_1 \right)  \phi_2^{\prime}\left( c_2 \right) \ldots \phi _{n} ^{\prime}\left( c_{n} \right) } \] with \(\phi _{i}\left( z \right)  = \prod_{a \in A_{i}}^{} \left( z - a \right) \).
+\end{lemma}
 \begin{proof}
+	We construct a sequence of polynomials. Let \(F_0 = F\) and define \(F_{i}\) as follows. Let \(F_{i}\left( \textbf{x} \right) = \frac{F_{i-1}}{\phi _{i} \left( x_{i} \right)}\) in the ring \(\mathbb{F}\left[ x_1, \ldots, x_{i-1}, x_{i+1}, \ldots, x_{n} \right] \). We see this construction guarantees \(\left[ \prod_{i= 1}^{n} x_{i}^{d_{i}} \right] F_{i-1} = \left[ \prod_{i= 1}^{n} x_{i}^{d_{i}} \right] F_{i}  \) and for all \(\textbf{c} \in \prod_{i= 1}^{n} A_{i}\) we see \(F_{n}\left( \textbf{c} \right) = F\left( \textbf{c} \right)  \) and \(\deg _{x_{i}} \left( F_{i} \right) \le d_{i} \) for all \(1 \le i \le n\), hence as \(\sum_{i= 1}^{n} \left| A_{i} \right|  > \deg \left( F \right) \), we see lagrangian interpolation yields a unique polynomial of the form \[
+		F_{n}\left( \textbf{x} \right) = \sum_{\textbf{c} \in \prod_{i= 1}^{n} A_{i}}^{}  F\left( \textbf{c} \right) \prod_{i= 1}^{n} \prod_{\gamma \in A_{i}  \setminus c_{i}}^{} \frac{x_{i} - \gamma}{c_{i} - \gamma}.
+	.\] Then, we note for \(\phi _{i}\left( z \right)  = \prod_{a \in A_{i}}^{} \left( z-a \right) \), we find \(\phi^{\prime}_{i}\left( z \right)  = \sum_{a_{k} \in A_{i}}^{} \prod_{i=a \in A_{i} \setminus a_{k}}^{} \left( z -a \right) \), and evaluating at a \(c_{i} \in A_{i}\) yields \(\phi^{\prime}\left( c_{i} \right)  = \prod_{a \in A_{i} \setminus c_{i}}^{} \left( c_{i} - a \right) \). Then, we note that \(\left[ \prod_{i= 1}^{n} x_{i}^{d_{i}} \right] F_{n}\left( \textbf{x} \right) = \sum_{c \in \prod_{i= 1}^{n} A_{i}}^{} \frac{F\left( \textbf{c} \right) }{\prod_{i= 1}^{n} \prod_{\gamma \in A_{i} \setminus c_{i}}^{} \left( c_{i} - \gamma \right) } = \frac{F\left( \textbf{c} \right) }{\prod_{i= 1}^{n} \phi _{i} ^{\prime} \left( c_{i} \right) } \). This completes the lemma.
+\end{proof}
+\begin{proof}[Proof of q-Dyson Conjecture]
 	First, we note that if \(a_{i} = 0\), then \(\left( x \right) _{a_{i}} = \left( 1-x \right) \), hence we may omit all of these terms as they will not affect the constant. Hence, we know each (relevant) \(a_{i}\) is a positive integer. Let \[
 		F\left( \textbf{x} \right) = \prod_{1 \le i < j \le n}^{} \left( \prod_{i=0}^{a_{i} - 1} \left( x_{j} - x_{i}q^{t} \right) \cdot \prod_{t=1}^{a_{j}} \left( x_{i} - x_{j}q^{t} \right)  \right)
 	.\]
-	Then, we note that the constant term in \(f_{q} \left( \textbf{x} \right) \) will be equal to the coefficient \(\prod_{i= 1}^{n} x_{i}^{\sum_{i= 1}^{n} a_{i}}\) in \(F\left( \textbf{x} \right) \).
+	 Denote \(\kappa = \frac{1}{\prod_{1 \le i < j \le n}^{} x_{i}^{a_{j}} x_{j} ^{a_{i}}}\). Then, we see
+	\begin{align*}
+		f_{q}\left( x_1, x_2, \ldots, x_{n} \right)  &= \prod_{1 \le i < j \le n}^{} [\prod_{k= 1}^{a_{i}}\left( 1 - \frac{x_{i}}{x_{j}}q^{k - 1} \right) \prod_{k=1}^{a_{j}} \left( 1 - \frac{x_{j}}{x_{i}} q^{k} \right)] \\
+				       &= \prod_{1 \le i < j \le n}^{}  \frac{1}{x_{j}^{a_{i}} x_{i} ^{a_{j}}} [\prod_{k=1}^{a_{i}}\left( x_{j} - x_{i}q^{k-1} \right) \prod_{i= 1}^{a_{j}} \left( x_{i} - x_{j}q^{k} \right)]   \\
+				       &= \dfrac{1}{\prod_{1 \le i < j \le n}^{} x_{i}^{a_{j}} x_{j}^{a_{i}}} \underbrace{\prod_{1 \le i < j \le n}^{} [\prod_{k=1}^{a_{i}} \left( x_{j} - x_{i}q^{k-1} \right) \prod_{k= 1}^{a_{j}}\left( x_{i} - x_{j}q^{k} \right) ]}_{= F\left( x_1, x_2, \ldots, x_{n} \right) } \\
+				       &= \kappa \prod_{1 \le i < j \le n}^{}\left( x_{j}^{a_{i}} + \beta _{i} \right) \left( x_{i}^{a_{j}} + \beta _{j} \right)   \\
+				       &= \kappa \prod_{1 \le i < j \le n}^{} (x_{j}^{a_{i}}x_{i}^{a_{j}} + \beta_{ij}) \\
+				       &= c \kappa (\prod_{1 \le i < j \le n}^{} x_{j}^{a_{i}} x_{i}^{a_{j}}) + \beta,
+	\end{align*} where \(\beta_{i}, \beta_{j}, \beta_{ij} , \beta\)  are all of the lower order terms from their respective product.  We see the first term is simply a constant, and we see as the exponent of \(x_{i}\) will take on all values, \(a_{k}\), except \(a_{i}\) and similarly, the exponent of \(x_{j}\) will take on all values except \(a_{j}\). Hence, we find \(\left[ 1 \right] f_{q}\left( \textbf{x} \right) = \left[ \prod_{i= 1}^{n} x_{i}^{\sum_{k = 1}^{n} a_{k} - a_{i}} \right]F\left( \textbf{x} \right)   \).\\
+	Now, we define \(\sum_{i= 1}^{n} a_{i} = \sigma\), \(A_{i} = \{1, q, \ldots, q^{\sigma - a_{i}}\} \) and a sequence \(\sigma_0 = 0\) , \(\sigma_{i} = \sum_{j = 1}^{i-1} a_{j}\) for \(2 \le i \le n + 1\). It is clear \(\left| A_{i} \right|  = \sigma - a_{i} + 1	\) and \(\sigma _{n + 1} = \sigma\). Now, we aim to prove that for \(\textbf{c} = \left( c_1, \ldots, c_{n} \right)  \in \prod_{i= 1}^{n} A_{i}\), we have \(F\left( \textbf{c} \right) = 0 \) unless \(c_{i} = q^{\sigma_{i}}\) for each \(1 \le i \le n\).\\
+We will suppose a contradiction, that is there exists a \(\left( c_1, c_2, \ldots, c_{n} \right) = \textbf{c} \in \prod_{i= 1}^{n} A_{i}\) such that \(F\left( \textbf{c} \right) \neq 0 \) for \(c_{i} = q^{\alpha_{i}}\) where \(0 \le \alpha_{i} \le \sigma - a_{i}\). Then, we see for a pair \(j > i\), we have \(\alpha _{j} - \alpha _{i} \ge a_{i}\), in particular every pair \(\alpha_{j}, \alpha_{i}	\) with \(i \neq j\) is distinct. Then, we see their is a unique ordering \(\pi\) such that \(\alpha_{\pi\left( 1 \right) } < \alpha_{\pi\left( 2 \right) } < \ldots < \alpha_{\pi\left( n \right) }\). Then, summing over the inequality \(\alpha_{\pi\left( i + 1 \right)}  - \alpha_{\pi\left( i \right) } \ge a_{\pi\left( i \right) }\) for \(1 \le i \le n-1\) yields
+	\begin{align*}
+		\left( \alpha_{\pi \left( _{n} \right) } - \alpha_{\pi\left( n-1 \right) } \right) + \left( \alpha_{\pi\left( n-1 \right) } - \alpha_{\pi\left( n-2 \right) } \right)  + \ldots + \left( \alpha_{\pi\left( 2 \right) } - \alpha_{\pi\left( 1 \right) } \right) &= \alpha_{\pi\left( n \right) } - \alpha_{\pi\left( 1 \right) } \\
+																																	       &\ge \sum_{i= 1}^{n-1} a_{\pi \left( i \right) } \\
+																																	       &= \sigma - a_{\pi\left( n \right) }
+	.\end{align*}
+	Then, as \(\alpha_{\pi\left( 1 \right) } \ge 0\) and \(\alpha_{\pi\left( n \right) } \le \sigma - a_{\pi\left( n \right) }\) by the original inequality, we find equality must hold, hence \[
+		\alpha_{\pi\left( n \right) } - \alpha_{\pi\left( 1 \right) } = \sigma - a_{\pi\left( n \right) } = \sigma_{n}
+	.\]
+	We see this summation works over \(k < n-1\) terms as well, so \(\alpha_{\pi\left( k \right) } = \sigma_{k}\) hence \(\pi\) must be the identity permutation and we see \(\alpha_{k} = \sum_{i= 1}^{k-1} a_{i} = \sigma_{k} \) for all \(1 \le k \le n\). \(\lightning\). Hence, we see \(F\left( \textbf{c} \right) = 0 \) unless each \(c_{i} = q^{\sigma_{i}}\), so the constant \[\left[ 1 \right] f_{q} = \dfrac{F\left( q^{\sigma_1}, \ldots, q^{\sigma_{n}} \right) }{\phi_1^{\prime}\left( q^{\sigma_1} \right) \ldots \phi_n^{\prime}\left( q^{\sigma_{n}} \right) }\] by the lemma.\\
+	Now, denote \(\tau_{i} = \binom{\sigma_{i}}{2} + \sigma_{i} \left( \sigma - \sigma_{i} + 1 \right) \) and we derive a subpower form of \(\phi _{i}^{\prime} \left( q^{\sigma_{i}} \right) \).\\
+	Then we see
+	\begin{align*}
+		\phi _{i} ^{\prime}\left( q^{\sigma_{i}} \right) &= \prod_{\underset{t \neq \sigma _{i}}{0 \le t \le \sigma - a_{i}}}^{} \left( q^{\sigma_{i}} - q^{t} \right) \\
+								 &= \prod_{t=0}^{\sigma_{i} - 1} \left( q^{\sigma_{i}} - q^{t} \right) \prod_{t=\sigma_{i} + 1}^{\sigma - a_{i}} \left( q^{\sigma_{i}} - q^{t} \right)   \\
+								 &= \prod_{t=0}^{\sigma_{i} - 1} \left( -q \right)^{t} \left( 1 - q^{\sigma_{i} - t} \right) \prod_{t=1}^{\sigma - \sigma_{i} - a_{i}} q^{\sigma_{i}}\left( 1- q^{t} \right)   \\
+	\quad \quad \quad \quad \quad \quad 						 &= \left( -1 \right) ^{\sigma_{i}} \cdot \underbrace{\prod_{i= 1}^{\sigma_{i} - 1} q^{t}}_{=q^{\sum_{i= 1}^{\sigma _{i} - 1} 1} = q^{\frac{\sigma_{i} \left( \sigma_{i} - 1 \right) }{2}} = q^{\binom{\sigma_{i}}{2}}} \cdot \underbrace{\prod_{i=0}^{\sigma_{i} - 1} ( 1 - q^{\sigma_{i} - t})}_{= \left( q \right) _{\sigma_{i}}} \cdot \underbrace{\prod_{i= 1}^{\sigma - \sigma_{i + 1}} q^{\sigma_{i}}}_{=q^{\sigma_{i} \left( \sigma - \sigma_{i + 1}  \right) }} \cdot \underbrace{\prod_{i= 1}^{\sigma - \sigma_{i + 1}} \left( 1 - q^{t} \right)}_{= \left( q \right) _{\sigma - \sigma_{i + 1} }}   \\
+								 &= \left( -1 \right) ^{\sigma_{i}} q^{\binom{\sigma_{i}}{2} + \sigma_{i} \left( \sigma - \sigma_{i + 1}  \right) } \left( q \right) _{\sigma_{i}} \left( q \right) _{\sigma - \sigma_{i + 1}} \\
+								 &= \left( -1 \right) ^{\sigma_{i}}q^{\tau _{i}}\left( q \right) _{\sigma_{i}}\left( q \right) _{\sigma - \sigma_{i + 1} }
+	.\end{align*}
+Similarly by double counting the terms and performing simple manipulations, we find \(F\left( q^{\sigma_1}, \ldots, q^{\sigma_{n}} \right) \) in a subpower form. First, note that we can write a partial sequence from \((\sigma_{j} - \sigma_{i} - a_{i}) = (\sigma_{j} - \sigma_{i + 1})\) to \(\left( \sigma_{j} - \sigma_{i} \right) \) as \[\prod_{t= 0}^{a_{i} - 1} \left( 1 - q^{\sigma_{j} - \sigma_{i} - t} \right) = \frac{\prod_{t=1}^{\sigma_{j} - \sigma_{i}} \left( 1 - q^{t} \right) }{\prod_{t = 1 }^{\sigma_{j} - \sigma_{i} - a_{i}} \left( 1 - q^{t} \right) }= \frac{\prod_{t=1}^{\sigma_{j} - \sigma_{i}} \left( 1 - q^{t} \right) }{\prod_{t = 1 }^{\sigma_{j} - \sigma_{i + 1}} \left( 1 - q^{t} \right) } = \frac{\left( q \right) _{\sigma_{j} - \sigma_{i}}}{\left( q \right) _{\sigma_{j} - \sigma_{i + 1}}}.\] Similarly, we find a partial sequence from \((\sigma_{j} - \sigma_{i})\) to \(\left( \sigma_{j} + a_{j} - \sigma_{i} \right) = \left( \sigma_{j + 1} - \sigma_{i} \right)  \) to be \[
+\prod_{t=1}^{a_{j}} \left( 1 - q^{\sigma_{j} - \sigma_{i} + t} \right) = \frac{\prod_{t= 1}^{\sigma_{j} + a_{j} - \sigma_{i}} \left( 1-q^{t} \right) }{\prod_{t=1}^{\sigma_{j} - \sigma_{i}} \left( 1-q^{t} \right) } = \frac{\prod_{t= 1}^{\sigma_{j + 1}  - \sigma_{i}} \left( 1-q^{t} \right) }{\prod_{t=1}^{\sigma_{j} - \sigma_{i}} \left( 1-q^{t} \right) }  = \frac{\left( q \right) _{\sigma_{j + 1} - \sigma_{i}}}{\left( q \right)_{\sigma_{j} - \sigma_{i}} }
+.\]
+Now, let \(u = \sum_{i= 1}^{n} \left( n-i \right) a_{i}\) and \(v = \sum_{i= 1}^{n} \left[ \left( n-i \right) \left( a_{i} + \sigma_{i} + \binom{a_{i}}{2} \right)  + \sigma_{i}\left( \sigma - \sigma_{i + 1} \right)  \right] \) and we see
+	\begin{align*}
+		F\left( q^{\sigma_1}, q^{\sigma_2}, \ldots, q^{\sigma_{n}} \right) &=  \prod_{1 \le i <j \le n}^{} \left( \prod_{t= 0 }^{a_{i} - 1} \left( q^{\sigma_{j}} - q^{\sigma_{i}}q^{t} \right) \cdot \prod_{t= 1}^{a_{j}} \left( q^{\sigma_{i}} - q^{\sigma_{j}}q^{t} \right)  \right)  \\
+										   &= \prod_{1 \le i < j \le n}^{}  \left( -1 \right) ^{a_{i}} \left( \underbrace{\prod_{t = 0}^{a_{i} - 1} q^{\sigma_{i} + t}}_{=q^{a_{i}\sigma_{i}} q^{\binom{a_{i}}{2}}} \underbrace{ \prod_{t=0}^{a_{i} - 1} (1 - q^{\sigma_{j} -\sigma_{i} - t})}_{= \frac{\left( q \right) _{\sigma_{j} -\sigma_{i}}}{\left( q \right) _{\sigma_{j} - \sigma_{ i + 1}}}} \cdot \underbrace{\prod_{t= 1}^{a_{j}} q^{\sigma_{i}}}_{= q^{\sigma_{i} \left( \sigma - \sigma_{i + 1} \right) }} \underbrace{ \prod_{t= 1}^{a_{j}} \left( 1 - q^{\sigma_{j} - \sigma_{i}  + t} \right) }_{=\frac{\left( q \right) _{\sigma_{j+1} - \sigma_{i}}}{\left( q \right) _{\sigma_{j} - \sigma_{i}}}}   \right) \\
+										   &= \left( -1 \right) ^{\sum_{i= 1}^{n} \left( n - i \right) a_{i}} q^{\sum_{i= 1}^{n} \left[ \left( n - i \right) (a_{i} \sigma_{i} + \binom{a_{i}}{2}) + \sigma_{i}\left( \sigma - \sigma_{i + 1} \right)   \right] } \prod_{1 \le i < j \le n}^{}  \frac{\left( q \right) _{\sigma_{j + 1} - \sigma_{i}}}{\left( q \right) _{\sigma_{j} - \sigma_{i + 1}}} \\
+										   &= \left( -1 \right) ^{u}q^{v} \frac{\prod_{i= 1}^{n-1} \prod_{j=i + 1}^{n} \left( q \right) _{\sigma_{j + 1} - \sigma_{i}}}{ \prod_{i= 1}^{n-1} \prod_{j = i + 1}^{n} \left( q \right) _{\sigma_{j} - \sigma_{i +1}}} \\
+										   &= \left( -1 \right) ^{u}q^{v} \frac{\prod_{i= 1}^{n-1} \prod_{j =  i + 2}^{n + 1} \left( q \right) _{\sigma_{j} - \sigma_{i}}}{ \prod_{i=2}^{n} \prod_{j = i }^{n} \left( q \right) _{\sigma_{j} - \sigma_{i}}} \\
+										   &= \left( -1 \right) ^{u}q^{v} \frac{\prod_{j = 3}^{n + 1} \left( q \right) _{\sigma_{j} - \sigma_1} (\prod_{i= 2}^{n-1} \prod_{j = i + 2}^{n} \left( q \right) _{\sigma_{j} - \sigma_{i}})(\prod_{i=2}^{n-1} \left( q \right) _{\sigma_{n +1} - \sigma_{i}})}{(\prod_{i=2}^{n-1} \prod_{j = i + 2}^{n} \left( q \right) _{\sigma_{j} - \sigma_{i}}) (\prod_{i=2}^{n-1} \prod_{j = i}^{i+1} \left( q \right) _{\sigma_{j} - \sigma_{i}})} \\
+										   &= \left( -1 \right) ^{u} q^{v} \frac{\prod_{i= 2}^{n-1} \left( q \right) _{\sigma - \sigma_{i}} \prod_{j = 3}^{n + 1} \left( q \right) _{\sigma_{j} - \sigma_1}}{\prod_{i=2}^{n - 1} \left( q \right) _{\sigma_{i + 1} - \sigma_{i}}} \cdot \frac{\left( q \right)_{\sigma_2 - \sigma_1} }{ \left( q \right) _{\sigma_2 - \sigma_1}}  \cdot \frac{\left( q \right) _{\sigma - \sigma_{n}}}{\left( q \right) _{\sigma - \sigma_{n}}} \underbrace{\left( q \right) _{\sigma_1 - \sigma_1}}_{1} \\
+										   &= \left( -1 \right) ^{u}q^{v}\frac{\prod_{i=2}^{n} \left( q \right) _{\sigma - \sigma_{i}}  \cdot \left( q \right) _{\sigma - \sigma_1}\cdot \prod_{i= 1}^{n} \left( q \right) _{\sigma_{i}}}{\prod_{i= 1}^{n} \left( q \right) _{\sigma_{i + 1}- \sigma_{i}}} \\
+										   &= \left( -1 \right) ^{u} q^{v} \prod_{i= 1}^{n} \frac{\left( q \right) _{\sigma_{i}} \left( q \right) _{\sigma - \sigma_{i}}}{\left( q \right) _{\sigma_{ i + 1} - \sigma_{i}}}
+	.\end{align*}
+	From here, we see \begin{align*}
+		\sum_{i= 1}^{n} \left( n - i \right) a_{i} &= \left( n - 1 \right) a_1 + \left( n-2 \right) a_2 + \ldots + 0a_{n}\\
+							   &= \sum_{i= 1}^{n-1} a_{i} + \sum_{i= 1}^{n-2} a_{i} + \ldots + \sum_{i= 1}^{1} a_{i}  + \underbrace{\sum_{i= 1}^{0} a_{i}}_{0}\\
+		&= \sigma_{n} + \sigma_{n-1} + \ldots +\sigma_2 + \underbrace{\sigma_1}_{0}  \\
+		&= \sum_{i= 1}^{n} \sigma_{i} \\
+	.\end{align*}
+	Hence, \(u = \sum_{i= 1}^{n} \sigma_{i}\) and the powers of \(-1\) will vanish. Similarly, we see by induction that the powers of \(q\) vanish, that is \(\sum_{i= 1}^{n} \left( n-i \right) \left( a_{i}\sigma_{i} + \binom{a_{i}}{2} \right)  = \sum_{i= 1}^{n} \binom{\sigma_{i}}{2}\). Now note that for \(j = 0\), we have \(\sum_{i= 1}^{0} \left( 0-i \right) \left( a_{i}\sigma_{i} + \binom{a_{i}}{2} \right)  = \sum_{i= 1}^{0} \binom{\sigma_{i}}{2} = 0\). Then, assuming the case \(j\) to be true, we see \todo{Figure out induction}\\
+	Assembling our results yields
+	\begin{align*}
+	\left[ 1 \right] f_{q}\left( \textbf{x} \right) = \frac{F\left( q^{\sigma_1}, \ldots, q^{\sigma_{n}}  \right) }{\phi_1^{\prime}\left( q^{\sigma_1} \right) \ldots \phi _{n}^{\prime} \left( q^{\sigma_{n}} \right) } &=  \prod_{i= 1}^{n} \frac{\left( q \right) _{\sigma_{i}} \left( q \right) _{\sigma - \sigma_{i}} }{\left( q \right) _{\sigma_{i}} \left( q \right) _{\sigma - \sigma_{i + 1}} \left( q \right) _{\sigma_{i + 1} - \sigma_{i}}} \\
+																											     &= \frac{\left( q \right) _{\sigma - \sigma_1}}{\prod_{i= 1}^{n}\left( q \right) _{\sigma_{i + 1} - \sigma_{i}}} \\
+																											     &= \frac{\left( q \right) _{\sigma}}{ \prod_{i= 1}^{n} \left( q \right)_{a_{i}} } \\
+																											     &= \frac{\left( q \right) _{a_1 + a_2 + \ldots + a_{n}}}{ \left( q \right) _{a_1} \ldots \left( q \right) _{a_{n}}}
+	.\end{align*}
 \end{proof}
