@@ -1,77 +1,7 @@
 %\lecture{2}{Tue 13 Jul 2021 14:09}{Chevalley-Warning Theorem and Sumsets}
-\chapter{Chevalley-Warning Theorem and Sumsets} \todo{Move Chevalley-Warning to
-its own section and proved 1-2 more statements and proofs on sumsets} Our first
-major theorem of this section concerns the theorem of Chevalley and Warning
-which declares the conditions under which a certain nontrivial solution to a
-polynomial in a finite field of characteristic $p$ can exist:
-\begin{theorem}[Chevalley-Warning Theorem] Let $F$ be a finite field of
-	characteristic $p$ and let $f_1, f_2, \ldots, f_k \in F[x_1, x_2,
-	\ldots, x_{n}]$ be polynomials and $N$ to be the number of points
-	$\textbf{x}\in F^{n}$ such that $f_1\left( \textbf{x} \right) = \ldots
-	= f_k \left( \textbf{x} \right)  = 0$. If $ \sum_{i= 1}^{k} \deg \left(
-	f_{i} \right)< n$, then $N \equiv 0 (\text{mod } p) $.  \end{theorem}
-	In order to provide a proof of this statement, let us first state and
-	prove the following lemma: \begin{lemma}[Lemma] Let $F$ be a finite
-		field and $k_1, k_2, \ldots, k_{n} \ge 0$ such that $\min _{1
-		\le i \le n} k_{i} \le \left| F \right|  - 2$. Then,
-		$\sum_{x_1, x_2, \ldots, x_{n} \in F}^{}
-		x_1^{k_1}x_2^{k_2}\ldots x_{n}^{k_{n}} = 0.$ (Note: if a
-		$0^{0}$ occurs in the expressions it will be treated as a $1$).
-		\end{lemma} \begin{proof}[Proof] Assume without loss of
-		generality that $k_1 < \left| F  \right| -1$. Then, by factoring out a $x_1^{k_1}$ from each term of the sum and grouping all such $x_1$'s, we have
-		$\sum_{x_1, x_2, \ldots, x_{n} \in F}^{}
-		x_1^{k_1}x_2^{k_2}\ldots x_{n}^{k_{n}} = \left( \sum_{x_1 \in
-		F}^{} x_1^{k_1} \right) \sum_{x_2, \ldots, x_{n} \in F}^{} x_2^{k_2}\ldots x_{n} ^{ k_{n}}$, hence we must
-		only show that $\sum_{x_1 \in F}^{} x_1^{k_1}= 0$. Suppose $k_1
-		= 0$, then $\sum_{x_1 \in F}^{}x_1^{k_1} = \left| F \right| $ and,
-		since $p$ divides  $\left|  F \right|$ we see the case $k_1 =
-		0$ is trivially true. Now, let $\omega \in F^{\times}$ be a
-		generator of $F^{\times}$. Then, we have that \[ \sum_{x_1 \in
-			F}^{}x_1 ^{ k_1} = \sum_{x_1 \in F^{\times}}^{}x_1 ^{
-		k_1} = \sum_{x_1 \in F^{\times}}^{}\left( \omega x \right) ^{
-	k_1} = \omega ^{ k_1} \sum_{x_1 \in F^{ \times}}^{} x_1 ^{ k_1}= \omega
-^{ k_1}\sum_{x_1 \in F}^{}x_1 ^{ k_1} .\] Taking the difference of the first and last terms of the above equality yields $\left(
-	\omega ^{ k_1} - 1 \right) \left( \sum_{x_1 \in F}^{} x_1 ^{
-	k_1}\right) = 0$, so we must have either the sum is $0$ or $\omega
-	^{k_1} -1 = 0$. However, as $\omega$ is a generator of the cyclic group
-	$F^{ \times}$, we may only have that $\omega ^{ k_1} = 1$ if $k_1
-\equiv -1 \left( \text{mod } \left| F \right|  \right) $.  But, as $0 < k_1 <
-\left| F \right| -1$ this case cannot occur, hence we see $\sum_{x_1 \in F}^{}
-x_1 ^{ k_1} = 0$, so the lemma is proven.  \end{proof} \begin{proof}[Proof of
-Chevalley-Warning Theorem] Recalling that $x^{\left|  F \right| } = x$ (and
-thus $x^{\left| F \right| -1} = 1$ for nonzero $x$). Then, define  \[ M =
-	\sum_{\textbf{x} \in F^{n}}^{} \prod_{i= 1}^{k} \left( 1 - f_{i}\left(
-\textbf{x} \right) ^{\left| F \right| -1} \right) .\] We see, by the earlier
-proposition, that a term of the sum will be $1$ if and only if $\textbf{x}$ is
-a solution to the system $f_1, f_2, \ldots, f_{k}$, else it will be $0$.
-Furthermore, it is clear by the construction that $M$ will be exactly equal to
-the number of solutions to our system $f_1, \ldots, f_{k}$, and hence it
-precisely $N$.\\ Now, let us define the product from our construction to be a
-polynomial  $g$, that is $g\left( \textbf{x} \right) = \prod_{i= 1}^{k} \left(
-	1-f_{i}\left( \textbf{x} \right) ^{\left| F \right| -1} \right)$. Then,
-	repeatedly applying the substitution $ x_{j}^{\left| F \right| } \to
-	x_{j}$ to $g$ yields a polynomial $\overline{g} = g$ for all
-	$\textbf{x}\in F^{n}$. Furthermore, $ \deg _{ x_j} \left(  \overline{g}
-	\right) \le \left| F \right| -1$ for $1 \le j \le n$(This is clear as ,
-	if it were not we would be able to apply the substitution once again).
-	Then, substituting $\overline{g}$ in place of $g$ yields \[ M =
-	\sum_{\textbf{x } \in F^{n}}^{} \overline{g}\left( \textbf{x} \right)
-.\] Then, applying our lemma, we see that all monomials with degree $\left| F
-\right|  -2$ or less will equal $0$ and hence the only possible nonzero terms
-of $\overline{g}$ are those of the form $ \prod_{i= 1}^{n}  x_{i}^{\left| F
-\right| -1}$. Expanding the product, we see that such a monomial would be of
-degree $n\left(\left| F \right| - 1 \right)$, however as $\deg f_{i} ^{\left| F
-\right| -1} = \left( \left| F \right| -1 \right) \deg \left( f_{i} \right)$, we
-see that $\deg \left( g \right) \le \left( \left| F \right| -1 \right) \sum_{i=
-1}^{k} f_{i} < n\left( \left| F \right| -1 \right)$ by construction.
-Consequently, any such monomial of $\overline{g}$ (and hence $g$) will have a
-zero coefficient, and thus $M = N \equiv 0 \left( \text{mod } p \right) $.
-\end{proof} This theorem allows us to prove certain constraints (and in the
-case of prime  $p$, the exact value) on the size of the davenport constant for
-a certain group. This result is too advanced for now, but we will return to it
-later. Next, let us examine theorems concerning sumsets such as the
-Cauchy-Davenport Theorem and the Erdős-Heilbronn conjecture on the lower bound
-of the size of sumsets.\ \begin{theorem}[Cauchy-Davenport Theorem] Given a
+\chapter{Simple Combinatorial Proofs}
+\section{Sumsets}\todo{prove 1-2 more combinatorial statements with Nullstellensatz} Now, with our the Nullstellensatz stated and proven, let us examine a few simple results concerning sumsets, those being the pointwise sum of all coordinates
+\begin{theorem}[Cauchy-Davenport Theorem \cite{alon_1999}] Given a
 	prime $p$ and nonempty $A,B \subseteq Z_{p}$, then $\left| A + B
 	\right| \ge \min \left\{ p, \left| A \right|  + \left| B \right|  -1
 	\right\} $.  \end{theorem} \begin{proof}[Proof] Suppose $\left| A
@@ -101,7 +31,7 @@ root of a particular polynomial.  \begin{notation}[Restricted Sumset] For a
 	\sum_{i=0}^{k} A_{i} = \left\{ a_0 + a_1 + \ldots + a_{k} : a_{i} \in
 A_{i}, h\left( a_0, a_1, \ldots, a_{k} \right) \neq 0 \right\} \] to be the
 restricted sumset over the $A_{i}$s with respect to $h$.  \end{notation}
-\begin{theorem}[General Restricted Sumset Theorem] For a prime $p$ and a
+\begin{theorem}[General Restricted Sumset Theorem\cite{alon_1999}] For a prime $p$ and a
 	polynomial $h\left( x_0, .., x_{k} \right)$ over $Z_p$ and nonempty
 	$A_0, A_1, \ldots, A_{k} \subseteq Z_p$, define  $c_{i} = \left| A_{i}
 	\right| -1$ and $m = \sum_{i=0}^{k} c_{i} - \deg \left( h \right)$.\\
@@ -133,7 +63,7 @@ restricted sumset over the $A_{i}$s with respect to $h$.  \end{notation}
 			superior lower bounds where possible. First, we examine
 			the function $h\left( a_0, \ldots, a_{k} \right)  =
 			\prod_{0\le i < j \le n}^{} \left( a_{i} - a_{j}
-			\right) $: \begin{theorem}[Restricted Sumset Theorem]
+			\right) $: \begin{theorem}[Restricted Sumset Theorem\cite{alon_1999}]
 				For a prime $p$, nonempty $A_0, A_1, \ldots,
 				A_{k} \subseteq Z_p$ with  $\left| A_{i}
 				\right| \neq \left| A_{j} \right| $ for any $i
@@ -143,7 +73,7 @@ restricted sumset over the $A_{i}$s with respect to $h$.  \end{notation}
 				\sum_{i=0}^{k} A_{i} \right| \ge \sum_{i=0}^{k}
 			\left| A_{i} \right| - \binom{k+2}{2} + 1 .\]
 		\end{theorem} A special case of this theorem for only two sets
-		is the following: \begin{theorem}[Erdős-Heilbronn Conjecture]
+		is the following: \begin{theorem}[Erdős-Heilbronn Conjecture\cite{alon_1999}]
 			For a prime $p$ and nonempty $A,B \subseteq Z_{p}$,
 			then $\left| A \oplus_{h} B \right| \ge \min \left\{ p,
 			\left| A \right|  + \left| B \right|  - \delta \right\}
@@ -160,7 +90,7 @@ restricted sumset over the $A_{i}$s with respect to $h$.  \end{notation}
 x_{i} - x_{j} \right)  \right) = \frac{m!}{c_0! c_1! \ldots c_{k}!} \prod_{k
 \ge i > j \ge 0}^{} \left( c_{i} - c_{j} \right).\] \end{lemma} \todo{Provide
 proof of this lemma based on proof of Ballot problem} With this out of the way,
-we now prove proposition 2.4: \begin{proof}[Proof of Restricted Sumset Theorem]
+we now prove proposition 2.4: \begin{proof}[Proof of Restricted Sumset Theorem ]
 	For this proof we will take the aforementioned \[ h\left( \textbf{x}
 		\right) = \prod_{0\le i < j \le k}^{} \left( x_{i} - x_{j}
 	\right) .\] Now, let us define $c_{i} = \left| A_{i} \right|  -1$ and
@@ -185,4 +115,22 @@ we now prove proposition 2.4: \begin{proof}[Proof of Restricted Sumset Theorem]
 We conclude this section with the proof of the Erdős-Heilbronn Conjecture:
 \begin{proof}[Proof of Erdős-Heilbronn Conjecture]
 	\todo{Add proof}
+\end{proof}
+\section{Graphs, Cubes, and Colorings}
+Now, we present a few combinatorial results of graph theory using the Combinatorial Nullstellensatz. For these proofs assume all graphs are loopless,
+\begin{theorem}[\cite{alon_1999}]
+Let \(p\) be an odd prime and \(G\) ,a graph with \(\frac{\sum_{i \in V\left( G \right) }^{} d\left( i \right)}{e\left( G \right) } = d\left( G \right) > 2p-2\) and \(\Delta \le 2p-1\), we find a \(p\)-regular subgraph.\end{theorem}
+\begin{proof}
+	Let \(B = \left( b_{i, e} \right)_{i \in V\left( G \right) , e \in E\left( G \right) } \) to be the incidence matrix of \(G\), that being,  \(b_{i, j} = \left \{
+		\begin{array}{11}
+			1, & \quad i \in e  \\
+			0, & \quad i \not\in e
+		\end{array}
+		\right\).
+		For each \(e \in E\left( G \right) \), let \(x_{e} \in \{0, 1\}  \) be an associated variable and define \begin{align*}
+			F: \{0, 1\} ^{e\left( G \right) } &\longrightarrow \GF\left( p \right)  \\
+			(x_{e})_{e \in E\left( G \right) } 	&\longmapsto F((x_{e})_{e \in E\left( G \right)} ) = \prod_{v \in V}^{}\left[ 1 - \left( \sum_{e \in E}^{} b_{v, e}x_{e} \right)^{p-1}  \right] - \prod_{e \in E}^{} \left( 1- x_{e} \right)
+	.\end{align*}		Then, recall that \(\frac{d\left( G \right) \cdot v\left( G \right) }{2} = e\left( G \right) \). Hence, we have \(e\left( G \right)  > \frac{2p-2}{2}v\left( G \right)  = \left( p-1 \right) v\left( G \right)  \). And, as the highest order term of the first product has degree \(\left( p-1 \right)\) as each \(x_{e}\) within the sum has degree \(p-1\) and the product over \(v\left( G \right) \) terms of order \(p-1\) is \(v\left( G \right) \left( p-1 \right) \), and the highest order term of the second product is \(\left( -1 \right) ^{e\left( G \right) -1} \prod_{e \in E\left( G \right) }^{} x_{e} }\) of order \(e\left( G \right) \), hence \(\deg \left( F \right) = e\left( G \right) \). Then, as the highest order term is \(\prod_{e \in E\left( G \right) }^{}  x_{e}^{1}\) with each \(x_{e} \in \{0, 1\} \), hence as \(\left| \{ 0, 1 \} \right|  - 1= \deg \left( x_{e} \right)  \), we see that applying combinatorial nullstellensatz yields an \(\left( x_{e} \right) _{e \in E\left( G \right) = \textbf{x} }\) such that \(F\left( \textbf{x} \right) \neq 0\) and as \(F\left( \left( 0 \right) _{e \in E\left( G \right) } \right) = 0 \), we see \(\textbf{x} \neq \left( 0 \right) _{e \in E\left( G \right) }\). Hence, \(\prod_{\textbf{x}}^{}  \left( 1 - x_{e}\right) = 0 \), so we see the first product is nonzero. Then, as \(a^{p -1} \equiv 1 \left( \mod p \right) \)  for all \(b \neq 0\), we see each \(\sum_{e \in E\left( G \right) }^{} b_{v, e}x_{e} = 0\), else the first product would be zero.\\
+	Now, let \(H\) be the subgraph induced by \(E\left( H \right) = \{e\in E\left( G \right) : x _{e} = 1\} \) and note that as all terms of the sum \(\sum_{e \in E}^{} b_{v, e} x_{e}\) are either \(0\) or \(1\) and as there are precisely \(2\) \(v \in V\left( G \right) \) such that \(b_{v, e} = 1\) for each \(e \in E\left( G \right) \), we see \(p \mid \left| \{e \in E\left( G \right) : x_{e} = 1\} \right\), as \(p\) is an odd prime. Then, as \(x_{e} = 1\) for all \(e \in E\left( H \right) \), we see \(\sum_{e \in E\left( H \right) }^{} a_{v, e}x _{e} = \sum_{e \in E\left( H \right) }^{} a_{v, e} =  d_{H}\left( v \right) \) and as \(p \mid e\left( H \right) = \left|\{e \in E\left( G \right) : x_{e} = 1\}  \right| \), we see \(p \mid d_{H}\left( v \right) \) for each \(v \in V\left( H \right) \). Furthermore, as \(d\left( v \right)  < 2p\) for all \(v \in H\), we see \(d_{H}\left( v \right)  = p\) for all \(v \in V\left( H \right) \). Hence, \(H\) is \(p\)-regular.
+
 \end{proof}
