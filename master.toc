@@ -2,5 +2,8 @@
 \contentsline {section}{\numberline {1.1}Notation}{1}{}%
 \contentsline {section}{\numberline {1.2}Background}{2}{}%
 \contentsline {chapter}{\numberline {2}Nullstellensatz}{3}{}%
-\contentsline {chapter}{\numberline {3}Chevalley-Warning Theorem and Sumsets}{13}{}%
-\contentsline {chapter}{\numberline {4}Zeilberger-Bressoud q-Dyson Theorem}{19}{}%
+\contentsline {chapter}{\numberline {3}Simple Combinatorial Proofs}{13}{}%
+\contentsline {section}{\numberline {3.1}Sumsets}{13}{}%
+\contentsline {section}{\numberline {3.2}Graphs, Cubes, and Colorings}{16}{}%
+\contentsline {chapter}{\numberline {4}Zeilberger-Bressoud q-Dyson Theorem}{18}{}%
+\contentsline {chapter}{\numberline {5}Chevalley-Warning Theorem and Kemnitz Conjecture}{25}{}%
