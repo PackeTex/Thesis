@@ -116,6 +116,7 @@ We conclude this section with the proof of the Erdős-Heilbronn Conjecture:
 \begin{proof}[Proof of Erdős-Heilbronn Conjecture]
 	\todo{Add proof}
 \end{proof}
+\newpage
 \section{Graphs, Cubes, and Colorings}
 Now, we present a few combinatorial results of graph theory using the Combinatorial Nullstellensatz. For these proofs assume all graphs are loopless,
 \begin{theorem}[\cite{alon_1999}]
@@ -134,3 +135,8 @@ Let \(p\) be an odd prime and \(G\) ,a graph with \(\frac{\sum_{i \in V\left( G 
 	Now, let \(H\) be the subgraph induced by \(E\left( H \right) = \{e\in E\left( G \right) : x _{e} = 1\} \) and note that as all terms of the sum \(\sum_{e \in E}^{} b_{v, e} x_{e}\) are either \(0\) or \(1\) and as there are precisely \(2\) \(v \in V\left( G \right) \) such that \(b_{v, e} = 1\) for each \(e \in E\left( G \right) \), we see \(p \mid \left| \{e \in E\left( G \right) : x_{e} = 1\} \right\), as \(p\) is an odd prime. Then, as \(x_{e} = 1\) for all \(e \in E\left( H \right) \), we see \(\sum_{e \in E\left( H \right) }^{} a_{v, e}x _{e} = \sum_{e \in E\left( H \right) }^{} a_{v, e} =  d_{H}\left( v \right) \) and as \(p \mid e\left( H \right) = \left|\{e \in E\left( G \right) : x_{e} = 1\}  \right| \), we see \(p \mid d_{H}\left( v \right) \) for each \(v \in V\left( H \right) \). Furthermore, as \(d\left( v \right)  < 2p\) for all \(v \in H\), we see \(d_{H}\left( v \right)  = p\) for all \(v \in V\left( H \right) \). Hence, \(H\) is \(p\)-regular.
 
 \end{proof}
+
+\begin{theorem}[\cite{alon_1999}]
+	Let \(p\) be a prime and let \(G = \left( V, E \right) \) be a graph with \(v\left( G \right)  > d\left( p-1 \right) \). Then, there is a nonempty \(U \subseteq V\left( G \right) \) such that the number of cliques on \(d\) vertices of \(G\) intersecting \(U\) is a multiple of \(p\)b
+
+\end{theorem}

@@ -1,7 +1,7 @@
 %\lecture{2}{Tue 13 Jul 2021 14:09}{Chevalley-Warning Theorem and Sumsets}
-\chapter{Chevalley-Warning Theorem and Kemnitz Conjecture} \todo{Move Chevalley-Warning to
-its own section and proved 1-2 more statements and proofs on sumsets} Our first
-major theorem of this section concerns the theorem of Chevalley and Warning
+\chapter{Chevalley-Warning Theorem and Reiher's Proof of the Kemnitz Conjecture}
+\section{Chevalley-Warning Theorem}
+Our first major result of this section concerns the theorem of Chevalley and Warning
 which declares the conditions under which a certain nontrivial solution to a
 polynomial in a finite field of characteristic $p$ can exist:
 \begin{theorem}[Chevalley-Warning Theorem] Let $F$ be a finite field of
@@ -66,9 +66,67 @@ see that $\deg \left( g \right) \le \left( \left| F \right| -1 \right) \sum_{i=
 1}^{k} f_{i} < n\left( \left| F \right| -1 \right)$ by construction.
 Consequently, any such monomial of $\overline{g}$ (and hence $g$) will have a
 zero coefficient, and thus $M = N \equiv 0 \left( \text{mod } p \right) $.
-\end{proof} This theorem allows us to prove certain constraints (and in the
-case of prime  $p$, the exact value) on the size of the davenport constant for
-a certain group. This result is too advanced for now, but we will return to it
-later. Next, let us examine theorems concerning sumsets such as the
-Cauchy-Davenport Theorem and the Erdős-Heilbronn conjecture on the lower bound
-of the size of sumsets.
+\end{proof}
+\section{Proof of Kemnitz Conjecture}
+This theorem has found many uses in combinatorics and number theory. One of its most potent results is Reiher's proof of the Kemnitz conjecture. This proof makes heavy use of the Chevalley-Warning Thoerem, as we will see. Before, we can state the theorem, however, we must define a few concepts.
+\begin{definition}
+	We define \(f\left( n, k \right) \) to be the minimal number \(f\) such that any set of \(f\) \(k\)-tuples of integers will contain a subset of cardinality \(n\), whose sum is congruent to \(0 \mod n\). \\
+	Given a set of tuples \(X\), we define the symbol \(\left( n \mid X \right) \) to be the number of subsets \(Y \subseteq X\) so that \(\left| Y \right|  = n\) and \(\sum_{y \in Y}^{} y \equiv 0 \mod n\).
+\end{definition}
+One notable result involving the first function is that of Erdos, Ginzburg, and Ziv that \(f\left( n, 1 \right) = 2n-1\). That is, given any sequence of integers of size greater or equal to \(2n-1\), we always find a subsequence whose sum is congruent to \(n\). As it turns out other such constants are much more difficult to compute. The following was conjectured by Kemnitz:
+\begin{theorem}[Kemnitz Conjecture]
+	\[f\left( n, 2 \right) = 4n-3\].
+\end{theorem}
+As it turns out, it suffices to show that \(f\left( p, 2 \right) \le 4p-3\) for a given prime \(p\). Taking the points \(\left( 1, 1 \right), \left( -1, 1 \right) \left( 1, -1 \right) ,\left( -1, -1 \right) \) each \(n-1\) times for a total of \(4n-4\) yields a set not containing any sequences congruent to \(0\), hence this proves the lower bound. Moreover, one finds that the set of primes \(p\), satisfying equality to be closed under multiplication, hence one need only show the fact to hold true for primes.\\
+Before we can prove the main statement, we need to prove several smaller lemmas, though many of the proofs will be quite analogous to each other.
+\begin{lemma}
+	Given a set \(J\) of ordered pairs with \(\left| J \right| = 3p-3  \) we find \[
+		1 - \left( p-1 \mid J \right)  - \left( p \mid J \right)  + \left( 2p-1 \mid J \right) + \left( 2p \mid J \right) \equiv 0
+	.\]
+\end{lemma}
+\begin{proof}
+	To prove this lemma one makes use of Chevalley and Warning's theorem in the field \(\textbf{F}_{p}\). First, denote the elements of \(J\) to be \(\left( a_{i}, b_{i} \right) \) for \(1 \le i \le 3p-3\). Then, define the following three polynomials \(f_1, f_2, f_3 \in F \left[ x_1, \ldots, x_{3p-2} \right] \) by
+	\begin{align*}
+		f_1 &= \sum_{i= 1}^{3p-3} x_{n}^{p-1} + x_{3p-2}^{p-1}\\
+		f_2 &= \sum_{i= 1}^{\infty} a_{n} x_{n}^{p-1} \\
+		f_3 &=  \sum_{i= 1}^{3p-3} b_{n} x_{n}^{p-1}
+	.\end{align*}
+	Then, we note that \(x_{n}^{p-1} = 1\) for all \(x_{n} \neq 0\) (of which there are \(p-1\)). Moreover, assuming \(x_{3p-2} = 0\), we find \(\sum_{i= 1}^{3p-3} x_{n}^{p-1} = 0\) only in the following cases
+	\begin{enumerate}
+		\item \(x_{i} = 0\) for all \(1 \le i \le 3p-3\),
+		\item \(x_{i}\neq 0\) for precisely \(p\) integers \(1 \le i \le 3p-3\),
+		\item \(x_{i} \neq 0\) for precisely \(2p\) integers \(1 \le i \le 3p-3\).
+	\end{enumerate}
+	Assuming the first case, we find \(1\) trivial zero. Moreover, this will clearly be a solution to \(f_2\) and \(f_3\) as well.\\
+	For the second case we find there are \(p-1\) possibilities for each \(x_{i}\) which is nonzero yielding \(\left( p-1 \right) ^{p}\) permutations for a given solution. We see a given combination will satisfy \(f_2 = f_3  = 0\) only if the subsequence \(\left( a_{n_{k}} , b_{n_{k}}\right) \) induced by taking only the nonzero elements is a sequence of zero sum. In this case we see there are precisely \(\left( p \mid J \right) \) possible subsequences. Putting this together yields \(\left( p-1 \right) ^{p} \left( p \mid J \right) \) solutions for case \(2\).\\
+	Case \(3\) follows similar reasoning. We find \(\left( p-1 \right) ^{2p}\) permutations of any given solution to \(f_2, f_3\). And the number of solutions to \(f_2 = f_3 = 0\) is precisely the number of zero sum subsequences of length \(2p\), \(\left( 2p \mid  J \right) \),  up to permutations if the \(x_{i}\)'s. Accounting for permutations yields \(\left( p-1 \right) ^{2p} \left( 2p \mid J \right) \) solutions in case \(2\).\\
+	Next, assuming \(x_{3p-2} \neq 0\) we see there are now two possibilities for a solution to \(f_1\),
+	\begin{enumerate}
+		\item \(x_{i} \neq 0\) for precisely \(p-1\) integers \(0 \le i \le 3p-3\), or
+		\item \(x_{i} \neq 0\) for precisely \(2p-1\) integers \(0 \le i \le 3p-3\).
+	\end{enumerate}
+	In both cases, the same argument produces the result yielding a cumulative \(\left( p-1 \right) ^{p} \left( p-1 \mid J \right)  + \left( p-1 \right) ^{2p}\left( 2p-1 \mid J \right) \) solutions when \(x_{3p-2} \neq 0\). Totaling, we find \[
+		1 + \left( p-1 \right) ^{p} \left( p \mid J \right)  + \left( p-1 \right) ^{2p} \left( 2p \mid J \right)  + \left( p-1 \right) ^{p} \left( p-1 \mid J \right)  + \left( p-1 \right) ^{2p}\left( 2p-1 \mid J \right)
+	\] solutions to \(f_1=f_2=f_3 = 0\). Since \(\left( p-1 \right) ^{p} \equiv \left( -1 \right) ^{p} \equiv -1\) and \(\left( p-1 \right) ^{2p} \equiv(\left( -1 \right) ^{p})^2 \equiv 1\), we find the result follows by simply applying the Chevalley-Warning theorem.
+\end{proof}
+The following lemma all follow from essentially the same argument using the given set of polynomials:
+\begin{lemma}\(\label{Kemp 4}\)
+	\begin{enumerate}
+		If \(\left| J \right|  = 3p-2\) or \(\left| J \right|  = 3p-1\), then
+			\begin{equation}
+				1 - \left( p \mid J \right)  + \left( 2p \mid J \right)  \equiv 0.\label{Kem 4}
+			\end{equation}
+		Moreover, \(\left( p \mid J \right) \equiv 0 \) implies \(\left( 2p \mid J \right) \equiv -1\).
+	\end{enumerate}
+\end{lemma}
+\begin{proof}
+	The second assertion follows directly from the first, so we need only show claim \(1\). Again, we define the following polynomials
+	\begin{align*}
+		f_1 &= \sum_{i= 1}^{3p-m} x_{n}^{p-1}\\
+f_2 &=  \sum_{i= 1}^{3p-m} a_{n} x_{n}^{p-1} \\
+f_3 &=  \sum_{i= 1}^{3p-m} b_{n} x_{n}^{p-1}
+	.\end{align*}
+	Applying the same methods as the first lemma yields \[
+		1 + \left( p-1 \right) ^{p} \left( p \mid J \right)  + \left( p-1 \right) ^{2p} \left(  2p \mid J \right)
+	\] solutions. Evaluating the coefficients and applying Chevalley-Warning yields the result.
+\end{proof}

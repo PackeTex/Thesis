@@ -96,7 +96,7 @@ Now, let \(u = \sum_{i= 1}^{n} \left( n-i \right) a_{i}\) and \(v = \sum_{i= 1}^
 Let us examine the
 First, grouping the squares and the terms involving \(-1\) and then grouping the remaining products yields
 \begin{align*}
-	\left( a_1 + \ldots + a_{n-1}-1 \right) &\left( a_1 + \ldots + a_{n-1} \right)  \\ &=  a_{n-1}^2 - a_{n-1} + a_{n-2}^2 - a_{n-2} + \ldots +  a_{1}^2 -  a_1 +   \\
+	\left( a_1 + \ldots + a_{n-1}-1 \right) &\left( a_1 + \ldots + a_{n-1} \right)   =  a_{n-1}^2 - a_{n-1} + a_{n-2}^2 \\&- a_{n-2} + \ldots +  a_{1}^2 -  a_1 +   \\
 					     &+ a_{n-1} \left( a_{1} + \ldots + a_{n-2} \right) + a_{n-2} \left( a_{1} + \ldots + a_{n-3} \right)  + a_{n-2} a_{n-1}\\ &+ a_{n-3} \left( a_1  +\ldots + a_{n-4}\right)    + a_{n-3} \left( a_{n-2} + a_{n-1} \right) + \ldots \\
 					     &+ a_3 \left( a_1 + a_2 \right) + a_3 \left( a_4+ \ldots + a_{n-1} \right) + a_2 a_1 + a_2 \left( a_3 + \ldots + a_{n-1} \right) \\
 					     &+ a_1 \left( a_2 + \ldots + a_{n-1} \right)
@@ -109,7 +109,7 @@ Collecting terms yields
 Applying this identity to \(\ref{Qdyson_1}\) and adding zero terms where necessary gives the result:
 \begin{align*}
 \sum_{i=2}^{n} \binom{\sigma_{i}}{2} &= a_{n-1}\sigma_{n-1} + \binom{a_{n-1}}{2} + 2\left(a_{n-2} \sigma_{n-2} + \binom{a_{n-2}}{2}\right) + \ldots + \left( n-2 \right) \left( a_{2}\sigma_2 + \binom{a_2}{2} \right) \\
-				     &= \sum_{i= 1}^{n-i} \left( n-i \right) \left( a_{i} \sigma_{i} + \binom{a_{i}}{2} \right)  .
+				     &= \sum_{i= 1}^{n-1} \left( n-i \right) \left( a_{i} \sigma_{i} + \binom{a_{i}}{2} \right)  .
 \end{align*}
 	Assembling all results yields
 	\begin{align*}
