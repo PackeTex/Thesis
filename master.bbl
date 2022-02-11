@@ -5,6 +5,16 @@ Noga Alon.
 \newblock Combinatorial nullstellensatz.
 \newblock {\em Combinatorics, Probability and Computing}, 8(1-2):7–29, 1999.
 
+\bibitem{Andrews_1975}
+George Andrews.
+\newblock {\em Proc. Advanced Sem., Math. Res. Center, Univ. Wisconsin,
+  Madison, Wis., 1975}.
+
+\bibitem{Good_1970}
+I.~J. Good.
+\newblock Short proof of a conjecture by dyson.
+\newblock {\em Journal of Mathematical Physics}, 11(6):1884--1884, 1970.
+
 \bibitem{grynkiewicz_2013}
 David~J. Grynkiewicz.
 \newblock {\em The Polynomial Method: The Erdos:Heilbronn Conjecture},
@@ -16,5 +26,21 @@ Gyula Károlyi and Zoltán Nagy.
 \newblock A simple proof of the zeilberger–bressoud q-dyson theorem.
 \newblock {\em Proceedings of the American Mathematical Society},
   142(9):3007–3011, Sep 2014.
+
+\bibitem{dyson_1963}
+Madan~Lal Mehta and Freeman~J. Dyson.
+\newblock Statistical theory of the energy levels of complex systems. v.
+\newblock {\em Journal of Mathematical Physics}, 4(5):713--719, 1963.
+
+\bibitem{reiher_2007}
+Christian Reiher.
+\newblock Reiher, c. on kemnitz’ conjecture concerning lattice-points in the
+  plane.
+\newblock {\em The Ramanujan Journal}, 13, Jun 2007.
+
+\bibitem{Wilson_1962}
+Kenneth~G. Wilson.
+\newblock Proof of a conjecture by dyson.
+\newblock {\em Journal of Mathematical Physics}, 3(5):1040--1043, 1962.
 
 \end{thebibliography}

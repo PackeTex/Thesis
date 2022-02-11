@@ -1,0 +1,52 @@
+%\lecture{2}{Tue 13 Jul 2021 14:09}{Chevalley-Warning Theorem and Sumsets}
+\chapter{Davenport constant of finite abelian p-groups}
+This theorem aims to prove one simple result, that being the davenport constant of an arbitrary finite abelian \(p\)-group.
+\begin{theorem}
+	Let \(p\) be prime, \(G = C_{q_1} \oplus C_{q_2} \oplus \ldots \oplus C_{q_{d}}\) with \(q_{i} = p_{i}^{m_{i}}\) for some primes \(p_{i}\) and integers \(m_{i} > 0\). Suppose \(g_1, \ldots, g_{m} \in G\) is a sequence of (not necessarily distinct) terms from \(G\). Then, if \(m\ge 1 + \sum_{i= 1}^{d} \left( q-1 \right) \), then there is a non-empty subset \(I \subseteq \left[ 0, m \right]  \) so that \(\{g_{i} : i \in I\} \) is zero-sum.
+\end{theorem}
+The proof of this theorem will consist of many parts which, here, are broken into smaller lemmas and propositions for simplicity.
+\section{Map Functor}
+For the remainder of this proof, \(F\) will be a field, \(m \ge 1\) will be an integer and \(\{0, 1\} ^{m}\) will denote the set of sequences consisting of all \(0\)'s and \(1\)'s taken from the vector space \(F^{m}\).
+\begin{proposition}
+	\(\MAP\left( \{0, 1\} ^{m}, F \right) \) is an \(F\)-vector space with pointwise addition and composition multiplication. That is, for \(f, g \in \MAP \left( \{0, 1\} ^{m}, F \right) \) we define \(\left( f + g \right) \left( x \right)  = f\left( x \right)  + g\left( x \right) \) and \(\left( fg \right) \left( x \right)  = f\left( g\left( x \right)  \right) \).
+\end{proposition}
+\begin{proof}
+	This statement is routinely checked. First we show the map space to be an abelian group, then we verify composition produces a \(F\)-module and subsequently an \(F\)-vector space.
+	Associativity of the map space follows from associativity of \(F\):
+	\begin{align*}
+		\left( f + \left( g+h \right)  \right) \left( x \right) &= f\left( x \right) + \left( g+h \right) \left( x \right) \\
+									&=  f\left( x \right) + g\left( x \right)  + h\left( x \right) \\
+									&= \left( f+g \right) \left( x \right) +h\left( x \right)  \\
+									&= \left( \left( f+g \right) \left( h \right)  \right) \left( x \right)
+	.\end{align*}
+	We choose the identity to be the zero map, denoted \(\textbf{0}\).\\
+	Additive inverses are satisfied by negation. For \(f \in \MAP\left( \{0, 1\}^{m}, F  \right) \), \(f^{-1} = -f\left( x \right) \) which we find to be well-defined and within the map space, and \(f + f^{-1} = f + \left( -f \right)  = \textbf{0}\).\\
+	Finally, commutativity is also inherited from \(F\): \[
+		\left( f+g \right) \left( x \right) = f\left( x \right) +g\left( x \right) = g\left( x \right) +f\left( x \right) = \left( g+f \right) \left( x \right)
+	.\]
+	Now, we verify \(\MAP\left( \{0,1\} ^{m}, F \right) \) is an \(F\)-module. Let \(r, s \in F\) and \(1 \in F\) to be the multiplicative identity of \(F\).\\
+	We find, for some \(\textbf{x} \in \{0, 1\} ^{m}\), \(\left( 1f \right) \left( \textbf{x} \right) = 1f\left( \textbf{x} \right) = f\left( \textbf{x} \right) \).\\
+	Furthermore, associativity of composition holds :\[
+		\left( \left( rs \right) f \right) \left( \textbf{x} \right) = \left( rs \right) f\left( \textbf{x} \right) = f\left( \left( sf \right) \left( \textbf{x} \right)  \right) = \left( r\left( sf \right)  \right) \left( \textbf{x} \right)
+	.\]
+	Lastly, distributivity of composition also holds:
+	\begin{align*}
+		\left( \left( r+s \right) f \right) \left( \textbf{x} \right) &= \left( r+s \right) f\left( \textbf{x} \right) = rf\left( \textbf{x} \right) + sf\left( \textbf{x} \right) \\
+									      &= \left( rf \right) \left( \textbf{x} \right) + \left( sf \right) \left( \textbf{x} \right)  \\
+									      &= \left( rf + sf \right) \left( \textbf{x} \right)  \\
+		\text{ and } \left( r\left( f+g \right)  \right) \left( \textbf{x} \right) &= r\left( \left( f+g \right) \left( \textbf{x} \right)  \right)  \\
+											   &= r\left( f\left( \textbf{x} \right) + g\left( \textbf{x} \right)   \right)  \\
+											   &= rf\left( \textbf{x} \right)  + rg\left( \textbf{x} \right)  \\
+											   &= \left( rf \right) \left( \textbf{x} \right)  + \left( rg \right) \left( \textbf{x} \right)  \\
+											   &= \left( rf + rg \right) \left( \textbf{x} \right)  \\
+	.\end{align*}
+	As these properties hold for composition (multiplication) and the addition operation forms an abelian group, we have thus verifies \(\MAP\left( \{0, 1\} ^{m}, F \right) \) is an \(F\)-module. Since \(F\) is a field, it is then a \(F\)-vector space.
+\end{proof}
+\section{Section 2}
+\begin{proposition}
+	The function \(h\left( \textbf{x} \right) = \prod_{i= 1}^{n} \left( 1- x_{i} \right) \)	is the characteristic function of the vector \(\textbf{0} \in \{0, 1\} ^{n}\). Moreover, the set of all monomials over \(F\left[ x_1, \ldots, x_{n} \right] \) forms a basis for \(\MAP\left( \{0, 1\} ^{m}, F \right) \).
+\end{proposition}
+\begin{proof}
+	First of all, it is clear that any vector, \(\textbf{x}\), which is nonzero will yield an indicie \(j\), \(1 \le j \le m\), such that \(x_{j} = 1\) yielding \(h\left( \textbf{x} \right) = 0\). So, \(h\) is the characteristic function. Now, we prove the set of all monomials forms a basis for \(\MAP\left( \{0, 1\} ^{m}, F \right) \).\\
+	Recall \(\left| \mathscr{P}\left( \left[ 1, m \right]  \right)  \right| = 2^{m} \) where \(\mathscr{P}\left( X \right) \) denotes the power set of \(X\). Thus, enumerate all possible subsets of \(\left[ 1, m \right] \) as \(J_0, J_1, \ldots, J_{2^{m}-1}\) where \(J_0 = \O\) and the rest of the \(J_{i}\), \(1 \le i \le 2^{m}-1\) are assumed nonempty and ordered by cardinality (so singletons first, followed by 2-tuples and so on). Next denote all possible monomials \(h_1, \ldots, h_{2^{m-1}} \in F\left[ x_1, \ldots , x_{n} \right] \) such that \(h_{k} = \prod_{i \in J_{k}}x_{i}\) for each \(0 \le k \le m\).
+\end{proof}

@@ -1,0 +1,75 @@
+\begin{lemma}\label{KemCorr4}
+	If \(\left| J \right| = 4p-3\), then \begin{align}
+		-1 + \left( p \mid J \right)  - \left( 2p \mid J \right)  + \left(3p \mid J \right) &\equiv 0 \text{ and, }\label{Kem 41}\\
+		\left( p-1 \mid J \right) - \left( 2p-1 \mid J \right) + \left( 3p-1 \mid J \right) &\equiv 0 \label{Kem 42}
+		\end{align}
+\end{lemma}
+\begin{proof}
+	This is proved analogously to the previous lemmas. First, we show \(\refeq{Kem 41}\) by taking the following polynomials
+	\begin{align*}
+		f_1 &= \sum_{i= 1}^{4p-3} x_{n}^{p-1}\\
+		f_2 &=  \sum_{i= 1}^{4p-3} a_{n} x_{n}^{p-1} \\
+		f_3&= \sum_{i= 1}^{4p-3} b_{n} x_{n}^{p-1}
+	.\end{align*}
+	Applying the same argument as the previous lemmas yields \[
+		1 + \left( p-1 \right) ^{p}\left( p\mid J \right) + \left( p-1 \right) ^{2p} \left( 2p \mid J \right)  + \left( p-1 \right) ^{p}\left( 3p\mid J  \right)
+	\] solutions. Evaluating the coefficients and applying Chevalley-Warning yields \[
+	1 - \left( p \mid J \right)  + \left( 2p \mid J \right)  - \left( 3p \mid J \right)  \equiv 0
+	.\]
+	Finally, negating this yields result \(\refeq{Kem 41}\).\\
+	Similarly, for \(\refeq{Kem 42}\) we use the polynomials
+	\begin{align*}
+		f_1 &=  \sum_{i= 1}^{4p-3} x_{n}^{p-1} + x_{4p-2}^{p-1}\\
+		f_2 &= \sum_{i= 1}^{4p-3} a_{n}x_{n}^{p-1} \\
+		f_3&= \sum_{i= 1}^{4p-3} b_{n} x_{n}^{p-1}
+	.\end{align*}
+	Counting solutions yields \begin{align*}
+		1 &+ \left( p-1 \right) ^{p} \left( p \mid J \right)  + \left( p-1 \right) ^{2p} \left( 2p \mid J \right)  + \left( p-1 \right) ^{3p} \left( 3p \mid J \right)  \\ &+ \left( p-1 \right) ^{p} \left( p-1 \mid X \right)  + \left( p-1 \right) ^{2p} \left( 2p-1 \mid X \right)  + \left( p-1 \right) ^{3p} \left( 3p-1 \mid X \right)
+		\end{align*} solutions. Evaluating coefficients and applying Chevalley-Warning theorem yields \[
+	1 - \left( p \mid J \right)  + \left( 2p \mid J \right)  - \left( 3p \mid J \right)  - \left( p-1 \mid J \right)  + \left( 2p-1 \mid J \right)   - \left( 3p-1 \mid J  \right) \equiv 0
+	.\]
+	As we already know the first \(4\) terms to be congruent to \(0\) negating what is left yields the result.
+\end{proof}
+These lemmas make full use of the Chevalley-Warning theorem and show its power in proving these sorts of combinatorial results. Before we can present the proof of the main theorem (the Kemnitz conjecture) we need to prove a few more lemmas.
+\begin{lemma}\label{KemLem5}
+	If \(\left| J \right| = 4p-3\), then
+	\begin{equation}
+		3 - 2\left( p-1 \mid J \right)  - 2\left( p \mid J  \right) + \left( 2p-1 \mid J \right)  + \left( 2p \mid J \right) \equiv 0. \label{Kem 51}
+	\end{equation}
+\end{lemma}
+\begin{proof}
+	Denoting \(\mathscr{I}\) to be the set of all subsets \(I \subseteq J\) with \(\left| I \right|  = 3p-3\), we see \begin{equation}
+		\sum_{I \in \mathscr{I}}^{} \left[ 1 - \left( p-1 \mid I \right)  - \left( p \mid I \right)  + \left( 2p-1 \mid I \right)  + \left( 2p \mid I \right)  \right] \equiv 0\label{Kem 51}
+	.\end{equation}
+	We find there are \(\binom{4p-3}{3p-3}\) possible sets \(I\). Then, for a given zero sum subsequence of length \(p-1\) in \(X\), we see we can for a set \(I \subseteq \mathscr{I}\) by simply appending \(2p-2\) elements to the subsequence. We find there are \(\binom{3p-2}{2p-2}\) possibilities for these appendices to form \(I\). Similarly, given a zero sum subsequence of length \(p\) we find \(\binom{3p-3}{2p-3}\) possible sets \(I\) containing the sequence. For a sequence of length \(2p-1\) we find \(\binom{2p-2}{p-2}\) possibilities and for a sequence of length \(2p\), we find \(\binom{2p-3}{p-3}\) possibilities.\\
+	Permuting over all such zero-sum sequences in \(J\) yields \begin{align*}
+		\eqref{Kem 51} = \binom{4p-3}{3p-3} &- \binom{3p-2}{2p-2}\left( p-1 \mid J \right)  - \binom{3p-3}{2p-3}\left( p \mid J \right)  \\
+		&+ \binom{2p-2}{p-2}\left( 2p-1 \mid J \right)  + \binom{2p-3}{p-3} \left( 2p \mid J \right) \equiv 0
+	.\end{align*}
+	Expanding and reducing the binomial coefficients modulo \(p\) yields equation \(\refeq{Kem 5}\).
+\end{proof}
+Before we may prove the main result we need just a few more lemmas:
+\begin{lemma}\label{KemLem3}
+	If a set of exactly ordered pairs \(J\) has a subset \(K\) with \(\left| K \right|  = 3p\) and \(\sum_{k \in K}^{} k \equiv 0\), then \(\left( p \mid J \right) > 0\).
+\end{lemma}
+\begin{proof}
+	Let \(q \in J\) be an abritrary element. We assume indirectly \(\left( p \mid J \right) = 0\). Since \(J\) has no zero-sum subsequences of length \(p\), we find \(J -q\) still will not have such a subsequence (where \(J - q\) denotes the set \(J\) excluding the element \(q\)), so \(\left( p \mid J - q \right) = 0\). Applying the second conclusion of \(\ref{Kemp 4}\) yields \(\left( 2p \mid J - q \right) > 0\). Letting \(k_{i} \in K\) be distinct elements of \(K\), \(1 \le i \le 3p\) we see \(\sum_{i= 1}^{3p} k_{i} = \sum_{i= 1}^{p} k_{i} + \sum_{i=p+1}^{3p} k_{i} \equiv 0\) and \(\sum_{i=p+1}^{3p} k_{i} > 0\) by the previous inequality, we find \(\sum_{i= 1}^{p} k_{i} > 0\), hence \(\left( p \mid J \right) > 0\).
+\end{proof}
+We prove one final lemma:
+\begin{lemma}\label{KemLemFin}
+	If \(\left| X \right| = 4p-3\) and \(\left( p \mid X \right) = 0\), then \begin{equation}\label{KemLemFin 0}\left( p-1\mid X \right) = \left( 3p-1 \mid X \right) . \end{equation}
+\end{lemma}
+\begin{proof}
+	Let \(N\) denote the number of partitions of \(X\) into \(3\) sets, \(A, B, C\) with \begin{equation}\label{KemLemFin1}\left| A \right| = p-1\), \(\left| B \right| = p-2,\text{ and }  \left| C \right| =2p\end{equation} so that \begin{equation} \label{KemLemFin2}\sum_{a \in A}^{} a = \sum_{c \in C}^{} c \equiv \left( 0, 0 \right) \text{ and consequently } \sum_{b \in B}^{} b \equiv \sum_{x \in X}^{} x.\end{equation}
+	First, we note that \[N \equiv \sum_{A}   \left( 2p \mid X - A \right)  \] where \(\sum_{A}^{} \) denotes the sum over all sets \(A \subseteq X\) so that \(\ref{KemLemFin1}\) and \(\ref{KemLemFin2}\) hold. Note that this simply counts the number of admissible \(C\) for each possible set \(A\), leaving whatever points remain to belong to \(B\), thereby counting the number of possible partitions (modulo \(p\)). Next, since \(\left| X - A \right| = 3p-2\), we may apply \(\ref{Kemp 4}\) to see \(N \equiv \sum_{A}^{} -1\). Finally, we see this is simply the negation of the number of all subsets of \(X\) of size \(p-1\) with zero-sum, so by definition, \(N \equiv - \left( p-1 \mid X\right) \),\\
+	Applying the same method, but over \(B\), we see \(N \equiv \sum_{B}^{} \left( 2p \mid X - B \right) \), by counting all possible sets \(C\) for each admissible \(B\). As \(\left| X - B \right| = 3p-1\), we may once again apply \(\ref{Kemp 4}\) to find \(N \equiv \sum_{X - B}^{} -1 \equiv - \left( 3p-1 \mid X \right) \), applying definitions to produce the final congruence.\\
+	By method of double counting we attain \(\left( p-1 \mid X \right) \equiv \left( 3p-1  \mid X \right) \), the desired result.
+\end{proof}
+With many small parts proven, we need simply combine them to produce the desired result, that \(\left( p \mid X \right) \neq 0\) if \(\left| X \right|  = 4p-3\).
+\begin{proof}[Proof of Kemnitz Conjecture]
+	Adding the equations we have obtained thus far, we see
+	\begin{equation}
+		(\ref{Kem 41}) + (\ref{Kem 42}) + (\ref{Kem 51}) + (\ref{KemLemFin 0}) \text{ yields } 2 - \left( p \mid X \right)  + \left( 3p \mid X \right) \equiv 0.
+	\end{equation}
+	Recalling that \(p\) was an odd prime, we see the statement \(\left( p \mid X \right) \equiv \left( 3p \mid X \right) \equiv 0 \) cannot be true (as \(2 \not\equiv 0\)), Hence, either \(\left( p \mid X \right) \not\equiv 0\) in which case the claim is shown, or \(\left( 3p \mid X \right) \not\equiv 0\) implying \(X\) contains a subset of size \(3p\) whose sum is zero. Applying lemma \(\ref{KemLem3}\) then yields that \(\left( p \mid X \right)  > 0\), so the claim is shown in this case as well. Finally, using the already known statements about multiplicative closure and the special case \(p = 2\) yields the full Kemnitz conjecture.
+\end{proof}

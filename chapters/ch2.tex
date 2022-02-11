@@ -1,22 +1,19 @@
-%\lecture{1}{Sat 10 Jul 2021 17:50}{The Combinatorial Nullstellensatz} Theorem
-%and proofs from CH 22 of Grynkiewicz Structural Additive theory %
 \chapter{Nullstellensatz}
-\section*{Hilbert's Nullstellensatz}
-Before we can approach the Combinatorial Nullstellensatz, it is important to see a closely related theorem, Hilbert's Nullstellensatz. One statement of this theorem is as follows,
+\section{Hilbert's Nullstellensatz}
+Before we can approach the Combinatorial Nullstellensatz, or any other tools of the polynomial method, it is important to see a closely related theorem, Hilbert's Nullstellensatz. This theorem is more algebraic in nature, though its influence in the Combinatorial Nullstellensatz will be clear. One statement of this theorem is as follows,
 \begin{theorem}[Hilbert's Nullstellensatz \cite{alon_1999}]
  Let \(F\) be an algebraically closed field and \(f, g_1, \ldots, g_{m} \in F\left[ x_1, \ldots, x_{n} \right] \). If for all common zeroes of \(g_1, \ldots, g_{m}\) we find \(f\) to be zero, then there is an integer \(k\) and polynomials \(h_1, \ldots, h_{m} \in F\left[ x_1, \ldots, x_{m} \right] \)  such that \(f^{k} = \sum_{i= 1}^{n} h_{i}g_{i}\).
 \end{theorem}
-We omit the proof of this theorem for now.\todo{Add proof of Nullstellensatz}
-	\section*{Combinatorial Nullstellensatz}
-Now, we move onto the main theorem of investigation, the Combinatorial
-Nullstellensatz. This theorem is actually a special case of Hilbert's Nullstellensatz, when \(n = m\) and each \(g_{i}\) is a monic univariate polynomial which is zero over all of \(S_{i}\). This yields a powerful generalization of the fundamental
-theorem of algebra. This result is applicable in proofs from graph
-theory, additive combinatorics, and many other branches of math.  In order to prove this powerful theorem let
-		us first state and prove the following lemma: \begin{lemma}[]
-			Let $R$ be an integral domain, $f\left( \textbf{x}
-			\right) \in R[x_1, x_2, \ldots, x_{n}]$, and \\$A_1, A_2,
+For a proof of this see \todo{Cite good proof of Hilbert's Nullstellensatz}\\
+This theorem, though closely related to the Combinatorial Nullstellensatz, will see no use in this thesis, though their historical and mathematical relation are good to keep in mind. With this, we now introduce the main theorem of this thesis, Alon's Combinatorial Nullstellensatz.\newpage
+	\section{Alon's Combinatorial Nullstellensatz}
+
+	Alon's theorem is actually a special case of Hilbert's, that is when \(n = m\) and each \(g_{i}\) is univariate and of the form \(\prod_{s \in S_{i}} \left( x_{i} - s \right) 	\). These extra conditions allow a stronger conclusion to be drawn, namely that \(f\) can split into polynomials of lesser collective degree than itself. Though this statement is non-rigorous, it is immediately clear that turning one polynomial into a sum of simpler polynomials can have useful corollaries. It is in fact one of these corollaries that we will make use of throughout the rest of this thesis. Before we can prove such a theorem, though, we need to state and prove the following lemma:
+	\begin{lemma}[]\cite{alon_1999}
+			Let $R$ be an integral domain and \(n \ge 1\), $f\left( \textbf{x}
+			\right) \in R[x_1, x_2, \ldots, x_{n}]$, and $A_1, A_2,
 			\ldots, A_n \subseteq R$ be finite and nonempty.
-			\\
+
 			Suppose $\deg _{x_{i}} f < \left| A_i \right| $ for
 			each $1\le i\le n$ and $f\left( a_1, a_2, \ldots, a_n
 			\right) = 0$ for all \\ $ \textbf{a} \in \prod_{i= 1}^{n}
@@ -25,13 +22,13 @@ theory, additive combinatorics, and many other branches of math.  In order to pr
 				$R$. Clearly, any polynomial in $R$ is a
 				polynomial in $F$ and as $f=0$ in $F$ implies
 				$f=0$ in $R$ we need only consider the case
-				$F=R$. We will induce on n. We already know the case \(n=1\) holds by \(\left( 1.2.1 \right) \). Now, we prove the case $n$.
+				$F=R$. We will proceed by induction on \(n\). We already know the case \(n=1\) holds by the Fundamental Theorem of Algebra (or a corollary thereof). Now, we prove the case $n$.
 				First, let us define  $f_i \left( x_1, x_2,
 				\ldots, x_{n-1} \right) $ to be the non \(x_{n}\) component of \(f\), that is \[f\left( \textbf{x} \right)  =
 				\sum_{i=0}^{\deg _{x_{n}} f} f_i \left( x_1,
 			x_2, \ldots, x_{n-1} \right)  x_n ^{i}.\]  We
 			see each $f_i \in F[x_1, x_2, \ldots, x_{n-1}]$
-				and $\deg_{x_{j}} f_i \le \deg _{x_{j}} f \le
+				and $\deg_{x_{j}} f_i \le \deg _{x_{j}} f <
 				\left| A_i \right| $ for all $1 \le j \le n-1$
 				and $0 \le i \le \deg _{x_{n}} f$. Let $a_i \in
 				A_i$ be an arbitrary element for each \(0 \le i \le n - 1\).
@@ -40,56 +37,51 @@ theory, additive combinatorics, and many other branches of math.  In order to pr
 				_{x_{n}} f < \left| A_n \right| $, the $n=1$
 				case implies that $f\left( a_1, a_2, \ldots,
 				a_{n-1}, x_{n} \right) = 0$ must be the zero
-				polynomial, hence $f_i \left( a_1, \ldots,
+				polynomial. Hence $f_i \left( a_1, \ldots,
 				a_{n-1} \right) =0$ for each $1\le i \le n$ and each $
 				\left( a_1, \ldots, a_{n-1} \right)  \in \prod_{i= 1}^{n-1} A_i$. Hence, by
-			the inductive hypothesis we must have that
-		each $f_i$ is the zero polynomial, and hence $f$ is the zero
+			the inductive hypothesis each $f_i$ is the zero polynomial, so $f$ is the zero
 	polynomial.  \end{proof} This lemma comprises the majority of the
-	intellectual heavy lifting for our main theorem and hence its proof
+	intellectual heavy lifting for our main theorem, and thus its proof
 	will appear very simple in comparison to its powerful statement:
 
 \begin{theorem}[Generalized Combinatorial
-	Nullstellensatz \cite{grynkiewicz_2013}] Let $R$ be an integral domain, and let
+	Nullstellensatz \cite{grynkiewicz_2013}] Let $R$ be an integral domain, \(n\ge 1\), and let
 			$A_1, A_2, \ldots, A_n \subseteq R$ be finite and
 			nonempty.\\ Let $f\left( \textbf{x} \right) \in R[x_1,
 			x_2, \ldots, x_{n}]$ be a polynomial and define $g_i
 			\left( x_{i} \right) = \prod_{a \in A_i}^{} \left( x_i
-			-a \right)  $ for $1 \le i \le n$. Then, we
-			have that $f\left( a_1, a_2, \ldots, a_n \right) = 0$
+			-a \right)  $ for $1 \le i \le n$. Then, $f\left( a_1, a_2, \ldots, a_n \right) = 0$
 			for all  $ \textbf{a} \in \prod_{i= 1}^{n} A_i $ if and only if
 			there are polynomials $h_1\left( \textbf{x} \right) ,
 			h_2 \left( \textbf{x} \right) , \ldots, h_n \left(
 			\textbf{x} \right)  \in R[x_1, x_2, \ldots, x_{n}]$
 			such that
 \begin{itemize}
-	\item \(f\left( \textbf{x} \right) = \sum_{i= 1}^{n} g_{i}\left( x_{i} \right) \left( h_{i}\left( \textbf{x} \right)  \right)  \),
+	\item \(f\left( \textbf{x} \right) = \sum_{i= 1}^{n} g_{i}\left( x_{i} \right) \Big( h_{i}\left( \textbf{x} \right)  \Big)  \),
 		\item \(\deg \left( g_{i} \right) + \deg \left( h_{i} \right) \le \deg \left( f \right)\) for \(1 \le i  \le n\),
 			\item \(\deg _{x_{j}} \left(g_{i} \right) + \deg _{x_{j}} \left(h_{i} \right) \le \deg _{x_{j}} \left(f_{i} \right)   \) for all \(1\le i , j \le n\).
 \end{itemize}
-\end{theorem}	\begin{proof}[Proof of Generalized Combinatorial Nullstellensatz] First, let \(A_1, A_2, \ldots, A_{n} \subseteq R\) and \(f\left( \textbf{x} \right) \in R\left[ x_1, \ldots, x_{n} \right]  \) with \(g_{i}\ \) defined as in the theorem. Then,  examining the backwards implication, it is
+\end{theorem}	\begin{proof} First, suppose \(A_1, A_2, \ldots, A_{n} \subseteq R\) and \(f\left( \textbf{x} \right) \in R\left[ x_1, \ldots, x_{n} \right]  \). Let, \(g_{i} = \prod_{a \in A_{i}}^{} \left( x_{i} - a \right)  \). Then,  examining the backwards implication, it is
 clear that \(f\left( \textbf{a}		\right)  = 0\) for each  $\textbf{a} \in \prod_{i= 1}^{n} A_i $. Now, let us examine the
 		forwards implication . First, let $f\left( \textbf{x} \right) \in R[x_1,
-		x_2, \ldots, x_{n}]$ be a polynomial which is zero on the whole
-		of such a product. We want to show that such a polynomial
-		$h_i$ exists for each $i$.  For each $1\le j \le n$
-		define \(g_{ji}\) such that \begin{equation} g_j \left( x_j \right) = \prod_{a \in
+		x_2, \ldots, x_{n}]$ be a polynomial which is zero on all of \(A_1 \times A_2 \times \ldots \times A_{n}\). We wish to show that the polynomials $h_i$ exists for each $i$, such that each \(h_{i}\) satisfies the conditions of the theorems.  For each $1\le j \le n$
+		define \(g_{ji}\) as follows: \begin{equation} \label{combnull1}
+			g_j \left( x_j \right) = \prod_{a \in
 	A_j}^{} \left( x_j - a \right) = x_{j}^{\left| A_j \right|} -
-	\sum_{i=0}^{\left| A_j -1 \right| } g_{ji} x_j ^{ i} ,\end{equation}
+	\sum_{i=0}^{\left| A_j  \right| -1 } g_{ji} x_j ^{ i} ,\end{equation}
 	where each $g_{ji} \in R$ as well. Hence, as $a_j \in A_j$ implies that
 $g_j\left( a_j \right) = 0$ we must have that $a_j ^{ \left| A_j \right| } =
-\sum_{i=0}^{\left| A_j -1 \right| } g_{ij} a_j ^{ i}$. Now, define
-$\overline{f}$ to be the polynomial for which we repeatedly apply this
-substitution for each $j$ to the polynomial $f$. We see that $\deg _{x_{i}}
+\sum_{i=0}^{\left| A_j \right| - 1 } g_{ij} a_j ^{ i}$. Now, we define a new polynomial \(\overline{f}\), such that \(\overline{f}\) is \(f\) after a repeated application of the substitution \(x_{j}^{\left| A_{j} \right|} \to \sum_{i=0}^{\left| A_{j} \right| - 1 } g_{ij} x_{j}^{i}\). We see that $\deg _{x_{i}}
 \left( \overline{f} \right) < \left| A_i \right| $ for each $i$(as any monomial term of such degree can be substituted for terms of lesser degree), and as
 $\overline{f}\left( \textbf{a} \right)  = f\left( \textbf{a} \right) = 0$ for
 each $ \textbf{a}\in \prod_{i= 1}^{n} A_i$ (This fact is trivial by the
-construction of $f$ and $\overline{f}$ ), then by the preceding lemma we must
+construction of $f$ and $\overline{f}$ ), then by the preceding lemma we
 have that $\overline{f} = 0$.  Next, consider the polynomial $f\left(
 \textbf{x} \right)  - \overline{f} \left( \textbf{x} \right) $. Define $f_0 =
 f$ and $f_i$ to be $f$ after the $i $'th such substitution. Furthermore, let $N \in \N$ be such that  $f_N =
 \overline{f}$. Then, the polynomial $f_i$ is obtained by examining a term of
-$f_{i-1}$ with a degree in $x_{j}$ of atleast $\left| A_j \right| $ and
+$f_{i-1}$ with a degree in $x_{j}$ of at least $\left| A_j \right| $ and
 replacing an individual factor of $x_{j} ^{ \left| A_j \right| }$ by the sum as
 we defined earlier. For simplicity let us take the term
 $cx_1^{k_1}x_2^{k_2}\ldots x_{n}^{k_n} \cdot x_{j} ^{\left| A_j \right| }$
@@ -97,51 +89,50 @@ $cx_1^{k_1}x_2^{k_2}\ldots x_{n}^{k_n} \cdot x_{j} ^{\left| A_j \right| }$
 see that the difference \[f_{i-1} - f_i = cx_1^{k_1}x_2^{k_2}\ldots x_{n}^{
 k_n} \left(x_{j}^{\left| A_j \right|}  - \sum_{i=0}^{\left| A_j \right| -1}
 g_{ji} x_j ^{i}\right) = cx_1^{k_1}x_2^{k_2}\ldots x_{n}^{k_n} \cdot g_j
-\left( x_j \right)\] by our original definition. Furthermore, as $f_N =
+\left( x_j \right)\] by \(\refeq{combnull1}\). Furthermore, as $f_N =
 \overline{f}$ we have that \[ f - \overline{f} = \left( f_0 - f_1 \right) +
 \left( f_1 - f_2 \right) + \ldots + \left( f_{N-1} - f_N \right) .\] Hence,
 $f = f - 0 = f - \overline{f} = \sum_{j=1}^{n} g_j \left( x_{j} \right) h_j$
 where each $h_j \in R[x_1, x_2, \ldots, x_{n}]$ is simply the sum of all of
 these preceding terms $cx_1^{k_1}\ldots x_{n}^{ k_n}$ as a result of these
-substitutions. \newpage
-Furthermore, by construction we had that $\deg g_j = \left| A_{j} \right| > \deg
+substitutions.
+Furthermore, we had by construction that $\deg g_j = \left| A_{j} \right| > \deg
 \left( \sum_{i=0}^{\left| A_j \right| -1} g_{ji} x_{j}^{i} \right) $, so we see
 that such a substitution will never increase the degree of our polynomial and
-hence $\deg f_i \le \deg f$. Then, as $\deg g_j = \left| A_j \right| $ we see
+hence $\deg f_i \le \deg f$. Then, as $\deg g_j = \left| A_j \right| $, we see
 that \[\deg\left( cx_1^{k_1}\ldots x_{n}^{k_n}g_j(x_j) \right) \le \deg
 f_{i-1} \le \deg f.\]
-\\
+
 Using the additive nature of polynomial degree yields $\deg \left( cx_1^{k_1}\ldots x_{n}^{ k_n} \right) + \deg g_j \le \deg f$,
 and as each $h_j$ is simply the sum of such terms we may substitute its degree
 to yield $\deg g_j + \deg h_j \le \deg f$.\\
 
-Lastly, we show this holds for projected degree as well. Note that as we are replacing a term, \(g_{j}\) with \(\deg _{x_{k}} \left(  g_{j} \right) = 0	 \) and as each \(h_{j}\) with \(\sum_{i=0}^{\left| A_{j} \right|- 1 }g_{ji}x_{j}^{_{i}}\), also having projected degree \(0\), the overall degree in \(x_{k}\) will not change after \(i\) substitutions. Hence, \(\deg _{x_{k}} \left(  cx_1^{k_1}\ldots x_{n}^{k_{n}} g_{j}\left( x_{j} \right) \right) = \deg _{x_{k}} \left( f_{i-1} \right) = \deg _{x_{k}} \left( f\right)    \).
-This yields \(\deg _{x_{k}} \left(cx_1^{k_1}\ldots x_{n}^{k_{n}} \right)  + \deg _{x_{k}} \left(g_{j} \right) = \deg _{x_{k}} \left(  f \right)  \). And, as each \(h_{j}\) is simply the sum of these remaining terms, we see \(\deg _{x_{k}} \left( h_{j} \right) + \deg _{x_{k}} \left( g_{j} \right)  \le \deg _{x_{k}} \left(  f \right)  \) for each \(1 \le j, k \le n\). \end{proof} This theorem is perhaps too general and too
+Lastly, we show this holds for projected degree as well. Note that as we are replacing a term \(g_{j}\) with \(\deg _{x_{k}} \left(  g_{j} \right) = 0	 \), and as each \(h_{j}\) with \(\sum_{i=0}^{\left| A_{j} \right|- 1 }g_{ji}x_{j}^{_{i}}\) also has projected degree \(0\), the overall degree in \(x_{k}\) will not change after \(i\) substitutions. Hence for \(k \neq j\), \(\deg _{x_{k}} \left(  cx_1^{k_1}\ldots x_{n}{k_{n}} g_{j}\left( x_{j} \right) \right) = \deg _{x_{k}} \left( f_{i-1} \right) = \deg _{x_{k}} \left( f\right)    \). Moreover, if \(k = j\), the same argument shows the projected degrees decrease.
+These facts yield \(\deg _{x_{k}} \left(cx_1^{k_1}\ldots x_{n}^{k_{n}} \right)  + \deg _{x_{k}} \left(g_{j} \right) = \deg _{x_{k}} \left(  f \right)  \). And, as each \(h_{j}\) is simply the sum of these remaining terms, we see \(\deg _{x_{k}} \left( h_{j} \right) + \deg _{x_{k}} \left( g_{j} \right)  \le \deg _{x_{k}} \left(  f \right)  \) for each \(1 \le j, k \le n\). \end{proof} This theorem is perhaps too general and too
 powerful for use in proving our simpler results. As a corollary, many authors
-include a weaker second statement of the theorem, where the splitting of a polynomial is replaced by a constraint on the size of the kernel.
+include a weaker second statement of the theorem, where the splitting of a polynomial is replaced by a constraint on the cardinality of the set on which \(f\left( \textbf{x} \right)  = 0\).
 \begin{theorem}[Combinatorial Nullstellensatz \cite{grynkiewicz_2013}] Let
-	$R$ be an integral domain, with $A_1, A_2, \ldots, A_n \subseteq R$ being
-	finite and nonempty, and $f\left( \textbf{x} \right) \in R[x_1, x_2,
+	$R$ be an integral domain, \(n \ge 1\), and $A_1, A_2, \ldots, A_n \subseteq R$ be
+	finite and nonempty, with $f\left( \textbf{x} \right) \in R[x_1, x_2,
 	\ldots, x_{n}]$ being a polynomial. Suppose \[ [x_1^{d_1}x_2^{d_2}\ldots
 	x_{n}^{d_n}] f\left( \textbf{x} \right) \neq 0 \] and that $\deg f =
 	\sum_{i=1}^{n} d_i$ with $0 \le d_i \le \left| A_i \right| -1$. Then,
 	there exists an element\\ $ \textbf{a} \in \prod_{i= 1}^{n} A_i $ such
 	that $f\left( \textbf{a} \right) \neq 0$. That is, given a nontrivial
 	"maximal degree" monomial of $f$ such that the degree of this monomial
-	in each variable individually is strictly less than the size of the
+	in each variable, \(x_{i}\), is strictly less than the size of the
 	corresponding set $A_i$, $f$ cannot be zero on the whole of the product
-	of the $A_i$.  \end{theorem} This is the generalization of the
-	Fundamental theorem of Algebra to which we referred earlier and it is
-	precisely this simple statement about the size of the kernel of a
+	of the $A_i$.  \end{theorem} This is in essence a generalization of the
+	Fundamental theorem of Algebra and it is
+	precisely this simple statement about the number of zeroes of a
 	particular polynomial which provides our combinatorial power. The proof
-	follows rather directly from the negation of the generalized version and it is
+	follows rather directly from the  generalized version
 	as follows: \begin{proof}[Proof] Let $g_i = \prod_{a \in A_i}^{} \left(
 		x_{i} - a \right) $ for $1 \le i \le n$ and suppose the
 		contrary. That is, $f\left( \textbf{a} \right) = 0$ for all $
-		\textbf{a} \in \prod_{i= 1}^{n} A_i $ despite the assumptions of the construction. Then, applying the
-		generalized combinatorial nullstellensatz yields polynomials
-		$h_1, h_2, \ldots, h_n \in R[x_1, x_2, \ldots, x_{n}]$ with the
-		desired properties. Now let us examine the nature of
+		\textbf{a} \in \prod_{i= 1}^{n} A_i $ despite the assumptions of the construction. Then, the
+		generalized combinatorial nullstellensatz yields polynomials with the desired properties, which we will denote as
+		$h_1, h_2, \ldots, h_n \in R[x_1, x_2, \ldots, x_{n}]$. Now let us examine the nature of
 		$[x_1^{d_1}\ldots x_{n}^{ d_n}] f\left( \textbf{x} \right) $.
 		As this is a maximal degree monomial of $f$, then only maximal
 		degree monomials of $h_i \left( \textbf{x} \right)  g_i \left(
@@ -154,7 +145,7 @@ include a weaker second statement of the theorem, where the splitting of a polyn
 	maximal degree monomials of $f$ must be of the form
 $x_1^{k_1}x_2^{k_2}\ldots x_{j}^{\left| A_j \right|} \ldots x_{n}^{ k_n}$.
 Thus, we must have $[x_1^{d_1}x_2^{d_2}\ldots x_{n}^{d_n}] f\left( \textbf{x}
-\right) = 0$, $\lightning$. Hence, there must be an $ \textbf{a} \in \prod_{i=
+\right) = 0$, $\lightning$. Hence, there must be some $ \textbf{a} \in \prod_{i=
 1}^{n} A_i $ such that $f\left( \textbf{a} \right) \neq 0$.  \end{proof} Our
 last version of the Combinatorial Nullstellensatz will examine what happens
 when $f$ vanishes over not all, but most (in a certain set-theoretic
@@ -163,9 +154,9 @@ Combinatorial Nullstellensatz and it builds on the original generalized
 version. The proof will involve division of polynomials of many variables, so
 let us first examine the nature of such an operation.
 \newpage
-\section*{Punctured Nullstellensatz}
+\section{Ball and Serra's Punctured Nullstellensatz}
 Sometimes we will not have polynomials which are zero over the whole of a set, but just on part. These conditions yield the Punctured Nullstellensatz. But, before we may state the theorem itself, we must state a result about the well-behavedness of multivariate polynomial division.
-\begin{lemma}[Multivariate Polynomial Division \cite{grynkiewicz_2013}] Let $R$ be an integral domain
+\begin{lemma}[Multivariate Polynomial Division ] Let $R$ be an integral domain
 	and let $g_{1} \left( x_{1} \right), \ldots, g_{k} \left( x_{k} \right)
 	\in R[x_1, x_2, \ldots, x_{n}] $ be polynomials of one variable with
 	leading coefficient $1$ for $1 \le k \le n$. Then,
@@ -183,14 +174,7 @@ Sometimes we will not have polynomials which are zero over the whole of a set, b
 \end{enumerate}
 Furthermore, the polynomial $w\left( \textbf{x} \right) $ is unique
 .\end{lemma}
-\begin{proof}
-	First, we show the existence of the first condition of \(2\). We see each \(g_{j}\) so we use a similar strategy to the Combinatorial Nullstellensatz. Let \(g_{ji} \in R\) such that \(g_{j}\left( x_{j} \right) = x_{j}^{\deg \left( g_{j} \right) }  - \sum_{i=0}^{\deg \left( g_{j} \right) - 1 }g_{ji} x_{j}^{i}\). Fix \(j\) such that \(\deg _{x_{j}} \left(  f \right) \ge \deg \left( g_{j} \right)  \). Then, we may write \(f\left( \textbf{x} \right) = A\left( \textbf{x} \right) x_{j}^{\deg \left( g_{j} \right) } + B\left( \textbf{x} \right) \), where \(A, B \in R\left[ x_1. \ldots, x_{n} \right] \) and \(\deg _{x_{j}} \left( B \right)  < \deg \left( g_{j} \right) \) and \(\deg \left( g_{j} \right) + \deg \left( A \right)  \le \deg \left( f \right)  \) and \(\deg _{x_{i}} \left( Ax_{j}^{\deg \left( g_{j} \right) } \right) \le \deg _{x_{i}} \left(  f \right) \). Substituting \(g_{j}\) yields \[
-		f\left( \textbf{x} \right) = A\left( \textbf{x} \right)  g_{j} \left( x_j \right)  +   A\left( \textbf{x} \right)\sum_{i=0}^{\deg \left( g_{j} \right) - 1 }g_{ji}x_{j}^{i} + B\left( \textbf{x} \right)
-	.\]
-	Letting \(f_1 = A\left( \textbf{x} \right)  \sum_{i=0}^{\deg \left( g_{j} \right) - 1} g_{ji}x_{j}^i + B\left( \textbf{x} \right)\) yields \(\deg _{x_{i}} \left(  f_1 \right) \le \deg _{x_{i}} \left(  f \right) \) for all \(1 \le i \le j\) and \(\deg _{x_{i}} \left( f_1 \right) < \deg _{x_{i}} \left(  f \right) \) for \(i = j\). Furthermore, \(\deg \left( f_1 \right)  < \deg \left( f \right) \). Now, we define \(f_1 \left( \textbf{x} \right)  = A_1\left( \textbf{x}\right) g_{k}\left( x_{k}   \right) + A\left( \textbf{x} \right) \sum_{i=0}^{\deg \left( g_{k} \right) - 1 } g_{ki}x_{k}^{i}  + B_1\left( \textbf{x} \right) \) and we continue this procedure over all \(x_{j}\). Then, we find \[
-			f\left( \textbf{x} \right) = \sum_{i= 1}^{k} h_{i}\left( \textbf{x} \right) g_{i}\left( x_{i} \right)  + w\left( \textbf{x} \right)
-		\]
-	\end{proof}
+As this proof is rather lengthy and unrelated to the topic at hand, we omit it. For a rigorous proof see \cite{grynkiewicz_2013}. With these constraints now understood, we state and prove the Punctured Nullstellensatz.
 	\begin{theorem}[Punctured Combinatorial Nullstellensatz \cite{grynkiewicz_2013}] Let $R$ be an integral
 	domain and let $A_1, A_2, \ldots, A_{n} \subset R$ be finite and
 	nonempty. Furthermore, for each $1\le i \le n$ let $ B_{i} \subseteq
