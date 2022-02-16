@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{alon_1999}
 Noga Alon.
@@ -7,8 +7,16 @@ Noga Alon.
 
 \bibitem{Andrews_1975}
 George Andrews.
-\newblock {\em Proc. Advanced Sem., Math. Res. Center, Univ. Wisconsin,
-  Madison, Wis., 1975}.
+\newblock Proc. advanced sem., math. res. center, univ. wisconsin, madison,
+  wis., 1975.
+\newblock In Richard Askey, editor, {\em Problems and Prospects for Basic
+  Hypergeometric Functions}.
+
+\bibitem{Elsholtz_2007}
+Yves Edel, Christian Elsholtz, Alfred Geroldinger, Silke Kubertin, and Laurence
+  Rackham.
+\newblock {Zero-Sum Problems in Finite Abelian Groups and Affine Caps}.
+\newblock {\em The Quarterly Journal of Mathematics}, 58(2):159--186, 05 2007.
 
 \bibitem{Good_1970}
 I.~J. Good.
@@ -34,9 +42,13 @@ Madan~Lal Mehta and Freeman~J. Dyson.
 
 \bibitem{reiher_2007}
 Christian Reiher.
-\newblock Reiher, c. on kemnitz’ conjecture concerning lattice-points in the
-  plane.
+\newblock On kemnitz’ conjecture concerning lattice-points in the plane.
 \newblock {\em The Ramanujan Journal}, 13, Jun 2007.
+
+\bibitem{Waerden_1931}
+B.L. Van~der Waerden.
+\newblock {\em Modern Algebra}.
+\newblock Julius Springer, 1931.
 
 \bibitem{Wilson_1962}
 Kenneth~G. Wilson.

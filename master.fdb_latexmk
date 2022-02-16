@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex master"] 1644465747 "master.aux" "master.bbl" "master" 1644465750
+["bibtex master"] 1644898453 "master.aux" "master.bbl" "master" 1644898453
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1640600964 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "bib.bib" 1642735850 3050 751de5dfceb9aba74ac66506f2db508c ""
-  "master.aux" 1644465285 5693 66c0923f462432d1e8b29b6bcb7faeb2 "pdflatex"
+  "bib.bib" 1644897936 4336 d6a1f7bef77a73678ce0bd1d2e888423 ""
+  "master.aux" 1644898447 5489 3a2f5127734db9b4792450ea3b204092 "pdflatex"
   (generated)
   "master.bbl"
   "master.blg"
-["pdflatex"] 1644465750 "master.tex" "master.pdf" "master" 1644465750
+["pdflatex"] 1644898446 "master.tex" "master.pdf" "master" 1644898446
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1640600964 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1640600964 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1640600964 4524 6bce29db5bc272ba5f332261583fee9c ""
@@ -235,13 +235,14 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1640600964 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1641337920 334625 4b142f77edfe92dd22429a0318fc6886 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1641337909 2920110 91d1a722a6f979f918a6aa140ce3428e ""
-  "chapters/ch1.tex" 1644465226 9680 f1ac842d6cb50cbaf449914dba3372ee ""
-  "chapters/ch2.tex" 1642900208 20113 f0aea1399030ac2382877988f2044530 ""
-  "chapters/ch3.tex" 1642899407 11658 1bb10270cf5d2a1cf49e1376964f6479 ""
+  "chapters/ch1.tex" 1644897335 10626 558a0f5023ca9cd4d39afe8c49d6166a ""
+  "chapters/ch2.tex" 1644898302 19897 6dc9421bc8deb4cae5bda61d6d8e29bb ""
+  "chapters/ch3.tex" 1644818183 11658 1bb10270cf5d2a1cf49e1376964f6479 ""
   "chapters/ch4.tex" 1642899951 20235 7b56d4ee9da04289d7a9b2fdea2ca19e ""
   "chapters/ch5-2.tex" 1642621457 8069 3e8e48285018c15c01fa5077ca60cfe6 ""
   "chapters/ch5.tex" 1642564617 11266 7b1ef8d76ad90ffdee9017e7964ba227 ""
-  "chapters/ch6.tex" 1644465747 5844 a53449e9c427787e5d2c10912ecca097 ""
+  "chapters/ch6.tex" 1644874530 27865 f55066108771fc19fb8953b6be57a6cf ""
+  "chapters/ch9.tex" 1642621056 97 2e59a5d2077c443addb7afabc6fd174a ""
   "extras/abstract.tex" 1641334444 400 c9700100ae168818aaa8ed6f29ae2cf3 ""
   "extras/acknowledgment.tex" 1641334444 98 316f269b400389e66064e8cdf41371f9 ""
   "extras/bib.tex" 1641334444 56 d4cc8d9e2b51283f11719f46f8a19f48 ""
@@ -251,10 +252,10 @@
   "extras/toc.tex" 1641334444 152 648928a9c930cf09b2aa18a6825caf9f ""
   "footmisc.sty" 1641334444 26725 050df338437f2d7156690d5a404f81da ""
   "indentfirst.sty" 1641334444 1009 1b6ffa01b2a46fa51ef84fdbd850f1d0 ""
-  "master.aux" 1644465285 5693 66c0923f462432d1e8b29b6bcb7faeb2 "pdflatex"
-  "master.bbl" 1644465747 1418 172f6e8e3cbe3cb771b5f762b9814bb5 "bibtex master"
-  "master.tex" 1644380670 767 5d1ef8261d7e217f8d3ea39c9803cc4c ""
-  "master.toc" 1644465285 1328 c555e3034120699872026acd9bbb2f06 "pdflatex"
+  "master.aux" 1644898307 5063 5cb07c154c1f3a124edcfdec195832ad "pdflatex"
+  "master.bbl" 1644898444 1881 2a7f4ef0ba46286558885161303de275 "bibtex master"
+  "master.tex" 1644875146 765 63cfb534b0d8194699e90064f3e8bd97 ""
+  "master.toc" 1644898307 1454 4e4c1f0ffd92ff021819fa62adc28e21 "pdflatex"
   "memphisthesis.cls" 1641334444 25507 dffc463fffc3ec80047107b26bccef62 ""
   (generated)
   "master.aux"

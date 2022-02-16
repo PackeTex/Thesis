@@ -1,10 +1,10 @@
 \chapter{Nullstellensatz}
 \section{Hilbert's Nullstellensatz}
 Before we can approach the Combinatorial Nullstellensatz, or any other tools of the polynomial method, it is important to see a closely related theorem, Hilbert's Nullstellensatz. This theorem is more algebraic in nature, though its influence in the Combinatorial Nullstellensatz will be clear. One statement of this theorem is as follows,
-\begin{theorem}[Hilbert's Nullstellensatz \cite{alon_1999}]
+\begin{theorem}[Hilbert's Nullstellensatz]
  Let \(F\) be an algebraically closed field and \(f, g_1, \ldots, g_{m} \in F\left[ x_1, \ldots, x_{n} \right] \). If for all common zeroes of \(g_1, \ldots, g_{m}\) we find \(f\) to be zero, then there is an integer \(k\) and polynomials \(h_1, \ldots, h_{m} \in F\left[ x_1, \ldots, x_{m} \right] \)  such that \(f^{k} = \sum_{i= 1}^{n} h_{i}g_{i}\).
 \end{theorem}
-For a proof of this see \todo{Cite good proof of Hilbert's Nullstellensatz}\\
+For a proof of this see \cite{Waerden_1931}.\\
 This theorem, though closely related to the Combinatorial Nullstellensatz, will see no use in this thesis, though their historical and mathematical relation are good to keep in mind. With this, we now introduce the main theorem of this thesis, Alon's Combinatorial Nullstellensatz.\newpage
 	\section{Alon's Combinatorial Nullstellensatz}
 
@@ -233,11 +233,10 @@ As this proof is rather lengthy and unrelated to the topic at hand, we omit it. 
 		g_{n-1}\left( x_{n-1} \right) $. Applying this operation to
 		equation (4) yields  \[ \overline{w\left( \textbf{x} \right)
 		l_{1} \left( x_1 \right) } = \overline{g_{n}\left( x_{n}
-\right) v_{n} \left( \textbf{x} \right) } .\] \todo{Finish Proof of Punctured
-Nullstellensatz} \end{proof} With all three variations of the Combinatorial
+\right) v_{n} \left( \textbf{x} \right) } .\]
+\end{proof} With all three variations of the Combinatorial
 Nullstellensatz fully stated and proven, allow us to move on to the examination
 of some of the most powerful results which these theorems prove, namely in
 combinatorics. We will begin with a proof of the Chevalley-Warning theorem as
 well as several results of additive combinatorics concerning sumsets, both
-standard and restricted.  \todo{Maybe change proof to the one found in Simeon
-and Ball instead of Grynkiewicz if it is less notationally dense}
+standard and restricted.
