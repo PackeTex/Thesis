@@ -1,17 +1,20 @@
 \contentsline {chapter}{\numberline {1}Introduction and Preliminary Results}{1}{}%
 \contentsline {section}{\numberline {1.1}Introduction}{1}{}%
 \contentsline {section}{\numberline {1.2}Definitions, Notation, and Preliminary Results}{3}{}%
-\contentsline {chapter}{\numberline {2}Nullstellensatz}{7}{}%
-\contentsline {section}{\numberline {2.1}Hilbert's Nullstellensatz}{7}{}%
-\contentsline {section}{\numberline {2.2}Alon's Combinatorial Nullstellensatz}{8}{}%
-\contentsline {section}{\numberline {2.3}Ball and Serra's Punctured Nullstellensatz}{13}{}%
-\contentsline {chapter}{\numberline {3}Simple Combinatorial Proofs}{16}{}%
-\contentsline {section}{\numberline {3.1}Sumsets}{16}{}%
-\contentsline {section}{\numberline {3.2}Graphs, Cubes, and Colorings}{20}{}%
-\contentsline {chapter}{\numberline {4}Zeilberger-Bressoud q-Dyson Theorem}{22}{}%
-\contentsline {chapter}{\numberline {5}Chevalley-Warning Theorem and Reiher's Proof of the Kemnitz Conjecture}{30}{}%
-\contentsline {section}{\numberline {5.1}Chevalley-Warning Theorem}{30}{}%
-\contentsline {section}{\numberline {5.2}Proof of Kemnitz Conjecture}{32}{}%
-\contentsline {chapter}{\numberline {6}Davenport constant of finite abelian p-groups}{41}{}%
-\contentsline {section}{\numberline {6.1}Map Functor}{41}{}%
-\contentsline {section}{\numberline {6.2}Section 2}{43}{}%
+\contentsline {chapter}{\numberline {2}Nullstellensatz}{8}{}%
+\contentsline {section}{\numberline {2.1}Hilbert's Nullstellensatz}{8}{}%
+\contentsline {section}{\numberline {2.2}Alon's Combinatorial Nullstellensatz}{9}{}%
+\contentsline {section}{\numberline {2.3}Ball and Serra's Punctured Nullstellensatz}{14}{}%
+\contentsline {chapter}{\numberline {3}Simple Combinatorial Proofs}{17}{}%
+\contentsline {section}{\numberline {3.1}Sumsets}{17}{}%
+\contentsline {section}{\numberline {3.2}Graphs, Cubes, and Colorings}{21}{}%
+\contentsline {chapter}{\numberline {4}Zeilberger-Bressoud q-Dyson Theorem}{23}{}%
+\contentsline {chapter}{\numberline {5}Chevalley-Warning Theorem and Reiher's Proof of the Kemnitz Conjecture}{31}{}%
+\contentsline {section}{\numberline {5.1}Chevalley-Warning Theorem}{31}{}%
+\contentsline {section}{\numberline {5.2}Proof of Kemnitz Conjecture}{33}{}%
+\contentsline {chapter}{\numberline {6}Davenport constant of finite abelian p-groups}{42}{}%
+\contentsline {section}{\numberline {6.1}Map Functors}{43}{}%
+\contentsline {section}{\numberline {6.2}Combinatorial Identities}{47}{}%
+\contentsline {section}{\numberline {6.3}The Davenport Constant}{50}{}%
+\contentsline {section}{\numberline {6.4}Remarks}{52}{}%
+\contentsline {chapter}{\numberline {7}Conclusions}{54}{}%

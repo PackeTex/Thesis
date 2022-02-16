@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.4)  9 FEB 2022 22:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.4)  14 FEB 2022 22:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -982,62 +982,65 @@ Chapter 1.
 ] [2]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 19.
+(mdframed)              on input line 18.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 22.
+(mdframed)              on input line 21.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 25.
+(mdframed)              on input line 24.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 28.
+(mdframed)              on input line 27.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 31.
+(mdframed)              on input line 30.
  [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 37.
+(mdframed)              on input line 36.
  [4]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 41.
+(mdframed)              on input line 40.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 44.
+(mdframed)              on input line 43.
 
 
-./chapters/ch1.tex:46: LaTeX Error: Illegal character in array arg.
+./chapters/ch1.tex:45: LaTeX Error: Illegal character in array arg.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.46 		\begin{array}{11}
+l.45 		\begin{array}{11}
                         
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./chapters/ch1.tex:46: LaTeX Error: Illegal character in array arg.
+./chapters/ch1.tex:45: LaTeX Error: Illegal character in array arg.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.46 		\begin{array}{11}
+l.45 		\begin{array}{11}
                         
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 52.
-./chapters/ch1.tex:56: Missing } inserted.
+(mdframed)              on input line 51.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 54.
+./chapters/ch1.tex:58: Missing } inserted.
 <inserted text> 
                 }
-l.56 ...ots, i_{n}x_1^{i_1} \ldots x_{n}^{i_{n}}\]
+l.58 ...ots, i_{n}x_1^{i_1} \ldots x_{n}^{i_{n}}\]
                                                    over \(n\) variables, we ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1048,40 +1051,30 @@ my insertion and my current dilemma will both disappear.
 [5]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 71.
-) (./chapters/ch2.tex [6]
+(mdframed)              on input line 76.
+ [6]) (./chapters/ch2.tex [7]
 Chapter 2.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 4.
-
-Overfull \hbox (7.6394pt too wide) in paragraph at lines 7--7
-\T1/ptm/m/n/12 Hilbert's 
- []
-
-
-Overfull \hbox (7.6394pt too wide) in paragraph at lines 7--7
-\T1/ptm/m/n/12 Hilbert's 
- []
-
-[7
+[8
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 12.
- [8]
+ [9]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 48.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 61.
  (/usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [9] [10]
+) [10] [11]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 114.
- [11] [12]
+ [12] [13]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 159.
@@ -1093,31 +1086,7 @@ Overfull \hbox (30.42435pt too wide) in paragraph at lines 196--206
 [][] [] \OT1/cmr/m/n/12 + [][] [] \OMS/cmsy/m/n/12 ^^T [][] []$ \T1/ptm/m/n/12 for $\OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 i; j \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 n$\T1/ptm/m/n/12 . Con-se-quently $[][] [] \OMS/cmsy/m/n/12 ^^T
  []
 
-[13] [14]
-Overfull \hbox (2.31161pt too wide) in paragraph at lines 243--243
-\T1/ptm/m/n/12 Simeon 
- []
-
-
-Overfull \hbox (27.31941pt too wide) in paragraph at lines 243--243
-\T1/ptm/m/n/12 Grynkiewicz 
- []
-
-
-Overfull \hbox (2.31161pt too wide) in paragraph at lines 243--243
-\T1/ptm/m/n/12 Simeon 
- []
-
-
-Overfull \hbox (27.31941pt too wide) in paragraph at lines 243--243
-\T1/ptm/m/n/12 Grynkiewicz 
- []
-
-) (./chapters/ch3.tex
-
-LaTeX Warning: Marginpar on page 15 moved.
-
-[15]
+[14] [15]) (./chapters/ch3.tex [16]
 Chapter 3.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1127,7 +1096,7 @@ Overfull \hbox (4.21779pt too wide) in paragraph at lines 4--7
 []\T1/ptm/b/n/12 Theorem 3.1 \T1/ptm/m/n/12 (Cauchy--Dav-en-port The-o-rem [[]])\T1/ptm/b/n/12 . []\T1/ptm/m/n/12 Given a prime $\OML/cmm/m/it/12 p$ \T1/ptm/m/n/12 and nonempty $\OML/cmm/m/it/12 A; B \OMS/cmsy/m/n/12 ^^R
  []
 
-[16
+[17
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
@@ -1141,7 +1110,7 @@ Overfull \hbox (17.60779pt too wide) in paragraph at lines 67--72
 []\T1/ptm/b/n/12 Theorem 3.3 \T1/ptm/m/n/12 (Re-stricted Sum-set Theorem[[]])\T1/ptm/b/n/12 . []\T1/ptm/m/n/12 For a prime $\OML/cmm/m/it/12 p$\T1/ptm/m/n/12 , nonempty $\OML/cmm/m/it/12 A[]; A[]; [] ; A[] \OMS/cmsy/m/n/12 ^^R
  []
 
-[17]
+[18]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 76.
@@ -1178,11 +1147,11 @@ Overfull \hbox (12.46938pt too wide) in paragraph at lines 112--112
 \OT1/cmr/m/n/12 + [] []$ 
  []
 
-[18]
-
-LaTeX Warning: Marginpar on page 19 moved.
-
 [19]
+
+LaTeX Warning: Marginpar on page 20 moved.
+
+[20]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 122.
@@ -1244,17 +1213,17 @@ braces don't get unbalanced. Otherwise just proceed.
 Acceptable delimiters are characters whose \delcode is
 nonnegative, or you can use `\delimiter <delimiter code>'.
 
-[20]
+[21]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 139.
-) (./chapters/ch4.tex [21]
+) (./chapters/ch4.tex [22]
 Chapter 4.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 4.
 
-LaTeX Warning: Citation `Dyson_1963' on page 22 undefined on input line 11.
+LaTeX Warning: Citation `Dyson_1963' on page 23 undefined on input line 11.
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1262,23 +1231,23 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 18.
-[22
+[23
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 28.
- [23] [24]
+ [24] [25]
 Overfull \hbox (27.44733pt too wide) detected at line 69
 []
  []
 
-[25]
+[26]
 Overfull \hbox (60.22626pt too wide) detected at line 84
 []
  []
 
-[26] [27]
+[27] [28]
 Overfull \hbox (76.45584pt too wide) detected at line 95
 []
  []
@@ -1288,12 +1257,12 @@ Overfull \hbox (7.28426pt too wide) detected at line 103
 []
  []
 
-[28]
+[29]
 Overfull \hbox (35.19008pt too wide) detected at line 113
 []
  []
 
-) (./chapters/ch5.tex [29]
+) (./chapters/ch5.tex [30]
 Chapter 5.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1306,20 +1275,20 @@ Overfull \hbox (22.46329pt too wide) in paragraph at lines 14--20
 []\T1/ptm/b/n/12 Lemma 5.1 \T1/ptm/m/n/12 (Lemma)\T1/ptm/b/n/12 . []\T1/ptm/m/n/12 Let $\OML/cmm/m/it/12 F$ \T1/ptm/m/n/12 be a fi-nite field and $\OML/cmm/m/it/12 k[]; k[]; [] ; k[] \OMS/cmsy/m/n/12 ^^U \OT1/cmr/m/n/12 0$ \T1/ptm/m/n/12 such that $[][] \OML/cmm/m/it/12 k[] \OMS/cmsy/m/n/12 ^^T
  []
 
-[30
+[31
 
-] [31]
+] [32]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 72.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 77.
- [32]
+ [33]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 82.
- [33]
+ [34]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 113.
@@ -1336,17 +1305,17 @@ l.120 	\end{enumerate}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[34]) (./chapters/ch5-2.tex
+[35]) (./chapters/ch5-2.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1.
- [35] [36]
+ [36] [37]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 34.
- [37]
+ [38]
 
-LaTeX Warning: Reference `Kem 5' on page 38 undefined on input line 49.
+LaTeX Warning: Reference `Kem 5' on page 39 undefined on input line 49.
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1380,26 +1349,126 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[38] [39]) (./chapters/ch6.tex [40]
+[39] [40]) (./chapters/ch6.tex [41]
 Chapter 6.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4.
+(mdframed)              on input line 6.
+[42
+
+]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 10.
+(mdframed)              on input line 12.
 
-Overfull \hbox (12.03555pt too wide) in paragraph at lines 11--12
+Overfull \hbox (12.03555pt too wide) in paragraph at lines 13--14
 \T1/ptm/m/n/12 com-po-si-tion mul-ti-pli-ca-tion. That is, for $\OML/cmm/m/it/12 f; g \OMS/cmsy/m/n/12 2 [] []$ \T1/ptm/m/n/12 we de-fine $[] [] \OT1/cmr/m/n/12 =
  []
 
-[41
-
-] [42]
+[43]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 46.
- [43]) (./extras/bib.tex [44] (./master.bbl)) [45
+(mdframed)              on input line 47.
+ [44] [45] [46]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 74.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 86.
+
+
+./chapters/ch6.tex:95: LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 	.\end{align}
+                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./chapters/ch6.tex:95: LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 	.\end{align}
+                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./chapters/ch6.tex:95: LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 	.\end{align}
+                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./chapters/ch6.tex:95: LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 	.\end{align}
+                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[47] [48]
+Overfull \hbox (2.87236pt too wide) detected at line 112
+[]
+ []
+
+
+Overfull \hbox (46.14728pt too wide) detected at line 117
+[]
+ []
+
+[49]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 124.
+
+
+./chapters/ch6.tex:134: LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134 		\begin{array}{11}
+                         
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./chapters/ch6.tex:134: LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134 		\begin{array}{11}
+                         
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[50] [51]) (./chapters/ch9.tex [52] [53]
+Chapter 7.
+) (./extras/bib.tex [54
+
+] (./master.bbl)) [55
 
 ] (./master.aux)
 
@@ -1410,18 +1479,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24492 strings out of 478353
- 487917 string characters out of 5854636
- 790728 words of memory out of 5000000
- 42062 multiletter control sequences out of 15000+600000
+ 24478 strings out of 478353
+ 487511 string characters out of 5854636
+ 786185 words of memory out of 5000000
+ 42045 multiletter control sequences out of 15000+600000
  429188 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,18n,97p,1594b,1008s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 104i,18n,97p,1714b,1008s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master.pdf (49 pages, 312096 bytes).
+Output written on master.pdf (59 pages, 344755 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
+ 289 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

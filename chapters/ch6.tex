@@ -1,11 +1,13 @@
 %\lecture{2}{Tue 13 Jul 2021 14:09}{Chevalley-Warning Theorem and Sumsets}
 \chapter{Davenport constant of finite abelian p-groups}
+Keeping in line with the them of zero-sum sequences, we now switch the domain of interest to abelian groups. For an abelian group \(G\), we define \(G\)'s davenport constant, \(D^{*}\left( G \right) \), to be the number \(d\) so that for any sequence of \(d\) or more elements elements, \(g_1, \ldots, g_{d} \in G\), we necessarily find a subsequence which is zero-sum.\\
+We see Kemnitz conjecture is a special case of the davenport constant on the group \( \left( \Z / p\Z \right)^{n} \). For other groups, however, such a constant proves elusive. While universal lower bounds have been proven, there currently exists no formula for the davenport constant of an arbitrary group. At best, the constant has been derived for a few special classes of groups like the one we have seen above, often denoted \(C_{p}^{n}\). This proof aims to generalize the result to all groups \(G\) of the form \(G = C_{p_1^{m_1}} \oplus C_{p_2^{m_2}} \oplus \ldots \oplus C_{p_{k}^{m_{k}}}\). The formal statement goes as follows:
 This theorem aims to prove one simple result, that being the davenport constant of an arbitrary finite abelian \(p\)-group.
 \begin{theorem}
 	Let \(p\) be prime, \(G = C_{q_1} \oplus C_{q_2} \oplus \ldots \oplus C_{q_{d}}\) with \(q_{i} = p_{i}^{m_{i}}\) for some primes \(p_{i}\) and integers \(m_{i} > 0\). Suppose \(g_1, \ldots, g_{m} \in G\) is a sequence of (not necessarily distinct) terms from \(G\). Then, if \(m\ge 1 + \sum_{i= 1}^{d} \left( q-1 \right) \), then there is a non-empty subset \(I \subseteq \left[ 0, m \right]  \) so that \(\{g_{i} : i \in I\} \) is zero-sum.
 \end{theorem}
-The proof of this theorem will consist of many parts which, here, are broken into smaller lemmas and propositions for simplicity.
-\section{Map Functor}
+The proof of this theorem will once again employ polynomial methods. This time, we do not make use of Combinatorial Nullstellensatz or Chevalley-Warning, but simply the manipulation of polynomials \(f: \{0, 1\} ^{m} \to F\) and binomial coefficients. Before we provide the proof, it is of note that there exists a lower bound which is trivial to construct. Take the sequence consisting of \(q_{i} - 1\) copies of the vector \(\textbf{x}_{i}\) for all \(1 \le i \le d\),  where \(\textbf{x}_{i}\) has a \(1\) in the \(i\)'th position and a \(0\) elsewhere. Since each coordinate has only \(q_{i} - 1\) elements which are nonzero, we see no zero-sum subsequence can exist for a single coordinate, thus certainly none can exist for an element of the ambient group, \(G\).
+\section{Map Functors}
 For the remainder of this proof, \(F\) will be a field, \(m \ge 1\) will be an integer and \(\{0, 1\} ^{m}\) will denote the set of sequences consisting of all \(0\)'s and \(1\)'s taken from the vector space \(F^{m}\).
 \begin{proposition}
 	\(\MAP\left( \{0, 1\} ^{m}, F \right) \) is an \(F\)-vector space with pointwise addition and composition multiplication. That is, for \(f, g \in \MAP \left( \{0, 1\} ^{m}, F \right) \) we define \(\left( f + g \right) \left( x \right)  = f\left( x \right)  + g\left( x \right) \) and \(\left( fg \right) \left( x \right)  = f\left( g\left( x \right)  \right) \).
@@ -42,11 +44,114 @@ For the remainder of this proof, \(F\) will be a field, \(m \ge 1\) will be an i
 	.\end{align*}
 	As these properties hold for composition (multiplication) and the addition operation forms an abelian group, we have thus verifies \(\MAP\left( \{0, 1\} ^{m}, F \right) \) is an \(F\)-module. Since \(F\) is a field, it is then a \(F\)-vector space.
 \end{proof}
-\section{Section 2}
 \begin{proposition}
-	The function \(h\left( \textbf{x} \right) = \prod_{i= 1}^{n} \left( 1- x_{i} \right) \)	is the characteristic function of the vector \(\textbf{0} \in \{0, 1\} ^{n}\). Moreover, the set of all monomials over \(F\left[ x_1, \ldots, x_{n} \right] \) forms a basis for \(\MAP\left( \{0, 1\} ^{m}, F \right) \).
+	The function \(h\left( \textbf{x} \right) = \prod_{i= 1}^{n} \left( 1- x_{i} \right) \)	is the characteristic function of the vector \(\textbf{0} \in \{0, 1\} ^{m}\). Moreover, the set of all monomials over \(F\left[ x_1, \ldots, x_{n} \right] \) forms a basis for \(\MAP\left( \{0, 1\} ^{m}, F \right) \).
 \end{proposition}
 \begin{proof}
 	First of all, it is clear that any vector, \(\textbf{x}\), which is nonzero will yield an indicie \(j\), \(1 \le j \le m\), such that \(x_{j} = 1\) yielding \(h\left( \textbf{x} \right) = 0\). So, \(h\) is the characteristic function. Now, we prove the set of all monomials forms a basis for \(\MAP\left( \{0, 1\} ^{m}, F \right) \).\\
-	Recall \(\left| \mathscr{P}\left( \left[ 1, m \right]  \right)  \right| = 2^{m} \) where \(\mathscr{P}\left( X \right) \) denotes the power set of \(X\). Thus, enumerate all possible subsets of \(\left[ 1, m \right] \) as \(J_0, J_1, \ldots, J_{2^{m}-1}\) where \(J_0 = \O\) and the rest of the \(J_{i}\), \(1 \le i \le 2^{m}-1\) are assumed nonempty and ordered by cardinality (so singletons first, followed by 2-tuples and so on). Next denote all possible monomials \(h_1, \ldots, h_{2^{m-1}} \in F\left[ x_1, \ldots , x_{n} \right] \) such that \(h_{k} = \prod_{i \in J_{k}}x_{i}\) for each \(0 \le k \le m\).
+	Recall \(\left| \mathscr{P}\left( \left[ 1, m \right]  \right)  \right| = 2^{m} \) where \(\mathscr{P}\left( X \right) \) denotes the power set of \(X\). Thus, enumerate all possible subsets of \(\left[ 1, m \right] \) as \(J_0, J_1, \ldots, J_{2^{m}-1}\) where \(J_0 = \O\) and the rest of the \(J_{i}\), \(1 \le i \le 2^{m}-1\) are assumed nonempty and ordered by cardinality (so singletons first, followed by 2-tuples and so on). Next denote all possible monomials \(h_0, h_1, \ldots, h_{2^{m-1}} \in F\left[ x_1, \ldots , x_{n} \right] \) such that \(h_{k} = \prod_{i \in J_{k}}x_{i}\) for each \(0 \le k \le m\). Finally, note that \(h_{k}\left( x \right) \in \{0, 1\}^{n} \) for \(x \in \{0, 1\} ^{m}\). First, we must show \(\{h_{k} : 1 \le k \le 2^{m}-1\} \) is linearly independent. Let \(a_{i} \in F\), \(1 \le i \le 2^{m}-1\), so that \[
+	a_0h_0 + \sum_{i= 1}^{2^{m}-1} a_{i}h_{i} = 0
+	.\]
+	Noting that \(h_{i} \left( \textbf{0} \right) = 0 \), we see \(a_0 = 0\). Now, let \(\textbf{x}_{n}\) be the vector having \(1\) in the \(n\)'th position and \(0\) elsewhere. Then, \(h_{i} \left( \textbf{x}_{n} \right) = 1 \) if and only if \(h_{i} = x_{n}\) or \( i = 0\). So, we see \[
+		0 = \left( \sum_{i= 1}^{2^{m}-1} a_{i} h_{i} \right)\left( \textbf{x}_{n} \right) = a_{i}
+	\] where \(a_{i} = \left[ x_{n} \right] \left( \sum_{i= 1}^{2^{m}-1} a_i h_{i} \right)  \). So, for all \(0  \le i \le m\), we see \(a_{i} = 0\), since these are all the monomials having at most one variable.\\
+Now, for \(n_1, n_2 \le m\) let \(\textbf{x}_{n_1, n_2}\) be the vector having \(1\) in the \(n_1\)'th and \(n_2\)'th positions and \(0\) in the others. Similarly to before, we see \(h_{i}\left( \textbf{x}_{n_1, n_2} \right) = 1 \) if and only if \(h_{i} \in \{x_{n_1}, x_{n_2}, x_{n_1}x_{n_2}\} \). Since \(a_{n_1} = a_{n_2} = 0\) (as \(n_1, n_2 \le m\)) then \[
+		0 = \left( \sum_{i= 1}^{2^{m}-1} a_{i}h_{i} \right) \left( \textbf{x}_{n_1, n_2} \right) = a_{i}
+	\]  where once again, \(a_{i} = \left[ x_{n_1}x_{n_2} \right] \left( \sum_{i= 1}^{2^{m}-1} a_{i}h_{i} \right) \). So, since there are \(\binom{m}{2}\) possible monomials with 2 variables, we have \(a_{i} = 0\) for \(m+1 \le i \le m + \binom{m}{2}\). Combining our results yields \(a_{i} = 0\) for \(0 \le i \le m +  \binom{m}{2}\).\\
+	Continuing inductively, assume for all monomials of at most \(j\) variables, we find \(a_{i} = 0\) for \(1 \le i \le \sum_{i= 1}^{j} \binom{m}{i}\). Then, let \(\textbf{x}_{n_1, n_2, \ldots, n_{j+1}}\), where \(n_1 < n_2 < \ldots < n_{j+1}\), be the vector with \(1\) in the \(n_1, n_2, \ldots, n_{j+1}\) coordinates and \(0\) elsewhere. Then, applying the previous induction set, we see only the monomials \(h_{i}\) on \(j+1\) variables will have the property that \(h_{i} \left( \textbf{x}_{n_1, n_2, \ldots, n_{j+1}} \right) = 1 \) for some \(n_1, n_2, \ldots, n_{j+1}\). So, \(0 = \left( \sum_{i= 1}^{2^{m}-1} a_{i}h_{i} \right) \left( \textbf{x}_{n1, n_2, \ldots, n_{k+1}} \right)  = a_{i}\) where \(a_{i} = \left[ x_{n_1}x_{n_2} \ldots x_{n_{j+1}} \right] \left( \sum_{i= 1}^{2^{m-1}} a_{i}h_{i} \right) \). So, \(a_{k} = 0\) for all \(k\) with \(\sum_{i= 1}^{j} \binom{m}{i} + 1 \le i \le \sum_{i= 1}^{j+1} \binom{m}{i} \).\\
+	Since \(\sum_{i= 1}^{m} \binom{m}{i} = 2^{m}-1\), we see this process will terminate after \(m\) iterations having proven all \(a_{i} = 0\), \(0 \le i \le 2^{m}+1\). Thus, we see \(\{h_{i} : 0 \le i \le 2^{m}-1\} \) is linearly independent.\\
+	Next, we show the set spans \(\MAP\left( \{0, 1\} ^{n}, F \right) \). To do this we generalize the prior argument, let \(\textbf{x}_{\alpha}\) be the vector having a \(1\) in the \(n\)'th position if \(n \in J_{\alpha}\) and \(0\)s elsewhere.\\
+	Then, we note that \(h_{\beta} \left( \textbf{x}_{\alpha} \right) = 1 \) if and only if \(J_{\beta} \subseteq J_{\alpha}\). Consider the following polynomial:
+	\begin{align*}
+		p\left( \textbf{x} \right) = f\left( \textbf{0} \right)  + \sum_{i= 1}^{2^{m}-1} \left( \sum_{j=0}^{\left| J_{i} \right| } \left( \left( -1 \right) ^{i-j} \sum_{\underset{\left| J_{k} \right| = j}{J_{k} \subseteq J_{i}}}f\left( \textbf{x}_{k} \right)\right)  \right) h_{i}\left( \textbf{x} \right)
+	.\end{align*}
+	Since \(h_{i} \left( \textbf{0} \right)  = \textbf{0}\) for all \(1 \le i\le 2^{m}-1\), we find \(p\left( \textbf{0} \right) = f\left( \textbf{0} \right)  \). Next, by we see we can drop all terms \(i\) where \(J_{i} \nsubseteq J_{\alpha}\) since \(h_{i}\left( \textbf{x}_{\alpha} \right)= 0 \) in these cases. Moreover, applying the principal of inclusion and exclusion yields that all \(f\left( \textbf{x}_{k} \right) \) where \(k \neq \alpha\), due to the leading factor of \(\left( -1 \right) ^{i-j}\). So, for a given \(\alpha\), we find \[
+		p\left( \textbf{x}_{\alpha} \right)= f\left( \textbf{0} \right)  + \sum_{i= 1}^{2^{m}-1} \left( \sum_{j=0}^{\left| J_{i} \right| } \left( -1 \right)^{i-j} \sum_{\underset{\left| J_{k} \right| = j}{J_{k} \subset J_{\alpha}}}^{} f\left( \textbf{x}_{k} \right)   \right) h_{i}\left( \textbf{x}_{\alpha} \right) = f\left( \textbf{x}_{\alpha} \right)
+	.\]
+	So, \(p = f\) and we see \(\{h_{i} : 0 \le i \le 2^{m}-1\} \) spans \(\MAP\left( \{0, 1\} ^{n}, F \right) \).\\
+	Finally, we conclude \(\{h_{i} : 0 \le i \le 2^{m}-1\} \) forms a basis for the map space.
 \end{proof}
+\begin{proposition}
+	Let \(f: \{0, 1\} ^{m} \to \Q\) be integer values. Then, there is a \(g\left( \textbf{x} \right) \in \Q\left[ x_1, \ldots, x_{m} \right]  \) such that \(g = \sum_{\alpha \in I}^{} b_{i}h_{i}\) for some \(I \subseteq \left[ 0, 2^{m}-1 \right] \) and \(b_{i} \in \Z\) so that, for all \(\textbf{x} \in \{0, 1\} ^{m}\), \(f\left( \textbf{x} \right) = g\left( \textbf{x} \right)  \).
+\end{proposition}
+\begin{proof}
+	Applying the previous proposition yields a \(g\) having the desired property that \(g\left( \textbf{x} \right)  = f\left( \textbf{x} \right) \) for \(\textbf{x} \in \{0, 1\} ^{m}\) defined as \[
+		g\left( \textbf{x} \right)  = f\left( \textbf{0} \right) + \sum_{i= 1}^{2^{m}-1} \left( \sum_{j=0}^{\left| J_{i} \right| } \left( -1 \right) ^{i-j} \sum_{\underset{\left| J_{k} \right| = j}{J_{k} \subset J_{\alpha}}}^{}f\left( \textbf{x}_{k} \right)  \right)  h_{i}\left( \textbf{x} \right)
+	.\]
+	Moreover, since \(f\left( \textbf{0} \right) \in \Z \) and \(\sum_{j=0}^{\left| J_{i} \right| } \left( -1 \right) ^{i-j} \sum_{\underset{\left| J_{k} \right| = j}{J_{k} \subset J_{\alpha}}}^{} f\left( \textbf{x}_{k} \right) \in \Z \) we see \(g\) has integer coefficients. Finally, each \(h_{i}\) is a monomial, so \(g\) is the desired sum of monomials.
+\end{proof}
+
+\section{Combinatorial Identities}
+Finally, before we may prove the main theorem, we must show a few binomial identities which we will make use of later.
+\begin{proposition}
+	Let \(q = p^{m}\) for \(p \ge 2\) being prime,  \(m\ge 1\), and \(y \in \Z\). Then,
+	\begin{align} \label{BinomId_1}
+		\binom{y-1}{q-1} \equiv \left \{
+			\begin{array}{11}
+				0 \mod p, & \quad y \not \equiv 0 \mod q \\
+				1 \mod p, & \quad y \equiv 0 \mod q
+			\end{array}
+			\right.
+	.\end{align}
+	Moreover, if \(f\left( \textbf{x} \right)  \in \Q\left[ x_1, x_2, \ldots, x_{m} \right] \) such that \(f\mid_{\{0, 1\} ^{m}}\) is integer valued, then \(\binom{f\left( \textbf{x}-1 \right) }{q-1} \in \Z\).
+\end{proposition}
+\begin{proof}
+First, recall \[
+	\binom{n}{k} = \frac{n!}{k! \left( n-k \right) !} = \frac{n\left( n-1 \right) \ldots \left( n-\left( k-1 \right)  \right) }{k\left( k-1 \right) \ldots \left( 2 \right) \left( 1 \right) }
+.\]
+Hence, if \(k \le n\), we find \(\binom{n}{k} \in \Z\). Else, if \(0 \le n \le k-1\), then \(\binom{n}{k} = 0 \in \Z\), and if \(n \le -1\), then \(\binom{n}{k} = \left( -1 \right) ^{k}\frac{\left( -n +\left( k-1 \right)  \right) !}{k!\left( -n-1 \right) !} \in \Z\). So, for all \(k \in \N\), \(n \in \Z\), we have \(\binom{n}{k} \in Z\).\\
+Next, note that \begin{equation}
+	\binom{y-1}{q-1} = \frac{\left( y-1 \right) \left( y-2 \right) \ldots \left( y- (q-2) \right) \left( y - (q-1) \right)  }{\left( q-1 \right) \left( q-2 \right) \ldots \left( 2 \right) \left( 1 \right) }\label{BinomId_2}
+.\end{equation}
+Now, we prove \refeq{BinomId_1}, suppose \(y \not \equiv 0 \mod q\),   let \(x = q - np^{i}\) for some \(1 \le i \le m-1\), so every factor of \(p\) in the denominator of \refeq{BinomId_2} will be of the form of \(x\). That is, counting over all such \(x\) will effectively count the number of factors of \(p\). Now, since \(q = p^{m}\), we see \(p^{i} \mid x\), while \(p^{i+1} \nmid x\). Now, recall \(\Phi\left( x \right) \), Euler's totient function, counts the number of naturals \(y\) such that \(\gcd\left( x, y \right) = 1\) and \(y < x\). Since \(\gcd\left( n, p \right) =1\), with \(p\) being prime, we see there are \(\Phi\left( p^{m-i} \right) = p^{m-i} - p^{m-i-1} \) possible \(n\) for a fixed \(i\). So, summing over all possible \(i\), we see there are \(\sum_{i= 1}^{m-1} \left( p^{m-i} - p^{m-i-1}\right) i \) factors of \(p\) in the denominator of \(\refeq{BinomId_2}\).\\
+Next, suppose \(y \equiv z \mod q\), for some \( 1\le z \le q-1\). Then any number of the form \(x = y - z - np^{i}\) with \(p \nmid n\), \(n \neq 0\), and \(1 \le i \le m-1\) we will have \(p^{i} \mid x\) but \(p^{i+1} \not \mid x\). Similarly to the previous argument, we see these are the only factors of the form \(y-a\) having \(p\) as a prime factor. So, we are only concerned with \(a\) of the form \(a = z + np^{i}\). Moreover, since we are working \(\mod q\), we wish for \(1 \le z + np^{i}  \le q-1\), so \(\lceil\frac{1-x}{p^{i}} \rceil \le n \le \lfloor \frac{q-1-z}{p^{i}}\rfloor \), with \(n \neq 0\). Since \(1 \le z \le q-1\), it is clear \(\lceil\frac{2-q}{p^{i}} \rceil \le \lfloor\frac{1-z}{p^{i}} \rfloor\)  and \(\left\lfloor \frac{q-1-z}{p^{i}} \right\rfloor \le 0\). Since \(n \neq 0\), we see \(\left\lceil \frac{1-z}{p^{i}} \right\rceil \le n \le -1\). Moreover, since \(-p^{m-i} + 1 \le \frac{2-q}{p^{i}}\) we obtain \(-p^{m-i} + 1 \le n\).\\
+Now, we have determined \(-p^{m-i} \le n \le -1\), so \(1 \le -n \le p^{m-i}\) and, since \(p \nmid n\), then we see \(\gcd\left( n, p^{m-i} \right) = 1\). Once again, using the totient function we see there are \(\Phi\left( p^{m-i} \right)  = p^{m-i} - p^{m-i-1}\) possible \(n\) for a fixed \(i\). So, summing over all factors in the numerator of \(\refeq{BinomId_2}\), we attain atleast \( m + \sum_{i= 1}^{m-1} \left( p^{m-i} - p^{m-i+1} \right) i\) factors of \(p\) in the numerator of \(\refeq{BinomId_2}\), where the leading \(m\) comes from the case \(i = 0\) which we have thus far excluded. Thus, there will be atleast \(m\) factors of \(p\) in the factorization of \(\binom{y-1}{q-1}\) and, since \(m> 0\) we find \(\binom{y-1}{q-1} \equiv 0 \mod p\) if \(y \not \equiv 0 \mod q\),\\
+Next, we show the case \(y \equiv 0 \mod q\), The same argument as earlier produces exactly \(\sum_{i= 1}^{m-1} \left( p^{m-i} - p^{m-i-1} \right)i \) factors of \(p\) in the numerator of \(\refeq{BinomId_2}\). Next, consider the following
+\begin{align}
+	\left( y-1 \right) &\left( y-2 \right) \ldots \left( y-\left( q-1 \right)  \right) - \left( q-1 \right) \left( q-2 \right) \ldots \left( 2 \right) \left( 1 \right) =\\ &\left( y-1 \right) \left( y-2 \right) \ldots \left( y-\left( q-1 \right)  \right)  - \left( q-1 \right) \left( q-2 \right) \ldots \left( q-\left( q-2 \right)  \right) \left( q-\left( q-1 \right)  \right) .\label{BinomId_3}
+\end{align}
+Once again, applying the same totient function argument to the subtrahend yields also \(\sum_{i= 1}^{m-1} \left( p^{m-i} - p^{m-i-1} \right) i\) factors of \(p\) in the second term. The only factors in either sum having a factor of \(p\) will be those of the form \(z - np^{i}\) where \( 1\le i \le m-1\), and \(z \in \{y, q\} \). All other elements of the products will have no factors of \(p\). Since both terms have precisely, \(\sum_{i= 1}^{m-1} \left( p^{m-i}- p^{m-i-1} \right) i\) factors of \(p\), we can remove a common factor of \(p^{\sum_{i= 1}^{m-1} \left( p^{m-i} - m^{m-i-1} \right) i}\). Remaining will be factors of the form \(\left( \frac{z}{p^{i}} - n \right) \) of \(\left( z-a \right) \) with \(z \in \{y, q\} \). Recalling that \(y \ge q = p^{m}\), with \(y \equiv 0 \mod q\), we see \(p \mid \frac{q}{p^{i}}\) and \(p \mid \frac{y}{p^{i}}\). So, expanding and factoring \refeq{BinomId_3} we see all forms not containing a factor of \(p\) will cancel. So, there will be atleast one factor \(p\) remaining, meaning in total there are at least \(1 + \sum_{i= 1}^{m-1} \left( p^{m-i} - p^{m-i-1} \right) i \) factors of \(p\) in \(\refeq{BinomId_3}\).\\
+Finally, we see there must then be atleast one factor of \(p\) remaining in
+\begin{align*}
+	\frac{\left( y-1 \right) \left( y-2 \right) \ldots \left( y-\left( q-1 \right)  \right)  - \left( q-1 \right) \left( q-2 \right) \ldots \left( q-\left( q-2 \right)  \right) \left( q-\left( q-1 \right)  \right)  }{\left( q-1 \right) \left( q-2 \right) \ldots \left( q-\left( q-2 \right)  \right) \left( q-\left( q-1 \right)  \right) } = \binom{y-1}{q-1} - 1
+.\end{align*}
+Thus, \(\binom{y-1}{q-1} - 1 \equiv 0 \mod p\), so \(\binom{y-1}{q-1}\equiv 0 \mod p\).\\
+So, both congurencies have thus been shown so only the result on polynomials remains to be proven.\\
+If \(f\left( \textbf{x} \right)  \in \Z\left[ x_1, \ldots, x_{m} \right] \), then on the domain \(\{0, 1\} ^{m}\) we see \(f\) must be integer valued. Thus, taking \(y = f\left( \textbf{x} \right) \) we see \(\binom{f\left( \textbf{x} -1 \right) }{q-1} \in \Z\) by the first paragraph of the proof.
+\end{proof}
+\section{The Davenport Constant}
+Now, with the use of all the prior lemmas and propositions, we will state and prove the davenport constant for finite \(p\)-groups.
+\begin{theorem}[Davenport Constant of Finite \(p\)-group]
+	Let \(p_{i}\) be primes for \(1 \le i \le d\), \(G\) be a finite abelian \(p\)-group of the form \(G = \bigoplus _{i=1}^{d} C_{q_{i}}\) with each \(q_{i} = p_{i}^{m_{i}}\) for some \(m_{i} > 0\) and let \(g_1, g_2, \ldots, g_{m} \in G\) be a sequence of not necessarily distinct elements. If \(m \ge 1 + \sum_{i= 1}^{d} \left( q-1 \right) = D^{*}\left( G \right)  \), then we find a nonempty zero-sum subsequence indexed by the set \(I \subseteq \left[ 0, m \right] \). (i.e. \(\sum_{i \in I}^{} g_{i} = 0\).
+\end{theorem}
+\begin{proof}
+	To begin, let us assume indirectly that there is a sequence \(S = \left( g_1, g_2, \ldots, g_{m} \right)\) with \(m \ge D^{*}\left( G \right) \) and each \(g_{i} \in G\), so that there are no nontrivial zero-sum subsequences in \(S\). Since \(G = C_{q_1} \oplus \ldots \oplus C_{q_{d}}\), we can write each \(g_{i}\) as \(g_{i} = \left( a_{i}^{\left( 1 \right) }, a_{i}^{\left( 2 \right) }, \ldots, a_{i}^{\left( d \right) } \right) \), with each \(a_{i}^{j} \in C_{q_{j}}\), \(1 \le i \le m\). For \(\textbf{x} = \left( x_{1}, \ldots, x_{d} \right) \) Define \(P : \Z \to \Q\) by  \[
+		P\left( \textbf{x} \right) = \prod_{i= 1}^{d} \binom{(\sum_{i= 1}^{m} a_{i}^{\left( j \right) }x_{i}) - 1}{q_{j} - 1}
+	.\]
+	By construction, we have \(\sum_{i= 1}^{m} a_{i}^{\left( j \right) } x_{i} \in \Z\left[ x_1, \ldots, x_{m} \right] \), so applying proposition \(6.4\), we see \(P\left( \textbf{x} \right) \) is integer valued for \(\textbf{x} \in \{0, 1\} ^{m}\).\\
+	Next, we identify each sequence \(\textbf{x} \in \{0, 1\} ^{m}\) with a subsequence \(T\left( \textbf{x} \right)  = \left(g_{i} \right)_{x_{i} = 1} \). If \(T\) was a nontrivial zero sum subsequence, we find \(\sum_{i= 1}^{m} a_{i}^{\left( j \right) }x_{i} \equiv 0 \mod q_{j}\) as an subsequence is zero sum if each coordinate in the direct sum is congruent to \(0\).\\
+	Then, applying proposition \(6.4\), we see \(\binom{\left( \sum_{i= 1}^{m} a_{i}^{\left( j \right) }x_{i} \right) -1 }{q_{j} - 1} \equiv 1 \mod p\) for each \(1 \le j \le d\) where \(x_{i} = \left \{
+		\begin{array}{11}
+			1, & \quad g_{i} \in T \\
+			0, & \quad g_{i} \not\in T
+		\end{array}
+		\right.\). So, the product \(P\left( \textbf{x} \right) = \prod_{i= 1}^{d} \binom{\left( \sum_{i= 1}^{m} a_{i}^{\left( j \right) } x_{i}\right) - 1 }{q_{j}-1} \equiv 1 \mod p\) where \(\textbf{x}\) is the element we identified with \(T\).\\
+		On the other hand, if there is no zero-sum subsequence, we see their is a \(j\) such that  \(\sum_{i= 1}^{m} a_{i}^{\left( j \right) }x_{i} \not \equiv 0 \mod q_{j}\). Then, applying proposition \(6.4\), we once again see \[
+			\binom{\left( \sum_{i= 1}^{m} a_{i}^{\left( j \right) }x_{i} \right) - 1 }{q_{j} - 1} \equiv 0 \mod p
+		\] for the same \(j\).\\ Thus,
+		\[
+			P\left( \textbf{x} \right) = \prod_{i= 1}^{d} \binom{\left( \sum_{i= 1}^{m} a_{i}^{\left( j \right) }x_{i} \right) -1}{q_{j}-1} \equiv 0 \mod p
+		.\]
+		Still under the assumption that \(S\) contains no  nontrivial zero-sum subsequences, we see the prior statement implies \(P\left( \textbf{x} \right) \equiv 0 \mod p\) for all nonzero \(\textbf{x} \in \{0, 1\} ^{m}\) and \(P\left( \textbf{0} \right) \equiv 1 \mod p \) (as the empty sum is a trivial zero-sum subsequence).\\
+		Now, let \(C \in \Z\) so that \(p \nmid C\) and let \(Q_{1}\left( \textbf{x} \right) \) be an integer valued function. Then, we have a polynomial \(Q\) so that \[
+			P\left( \textbf{x} \right)  = Q\left( \textbf{x} \right) = C \chi_{\textbf{0}}\left( \textbf{x} \right)  + pQ_1\left( \textbf{x} \right)
+		.\]
+		Applying proposition \(6.3\), we see \(Q_1\left(\textbf{x}  \right) \) can be identified with a function which is the sum of monomials. Moreover, proposition \(6.2\) yields \(\chi_{\textbf{0}\left( \textbf{X} \right) } = \prod_{i= 1}^{n} \left( 1-x_{i} \right) \).\\
+		Let \(c_0 = \left[ x_1 \ldots x_{m} \right]Q_1\left( \textbf{x} \right)  \). Then, we see \(\left[ x_1\ldots x_{m} \right]\left( Q\left( \textbf{x} \right)  \right) = C\left( -1 \right) ^{m} + p c_0  \). Since \(p\nmid C\), we see \(C\left( -1 \right) ^{m} + pc_0 \not \equiv 0 \mod p\), thus this coefficient is nonzero. So, since the coefficient of \(x_1 \ldots x_{m}\) is nonzero, we find \(\deg \left( Q \right) \ge \deg \left( x_1 \ldots x_{m} \right) = m\).\\
+		On the other hand, since \(x_{i} \in \{0, 1\} \), we note \(x_{i}^{k} = x_{i}\) for all \(1 \le i \le m\) and every \(k \in \Z\). So, replacing every occurence of \(x_{i}^{k}\) with \(x_{i}\), in \(P\left( \textbf{x} \right) \), we see we obtain a polynomial with rational coefficients and all terms monomials. Then, since \begin{align*}
+			\binom{\left( \sum_{i= 1}^{m} a_{i}^{\left( j \right) }x_{i} \right) -1}{q_{j}-1} &= \frac{\left( \left( \sum_{i= 1}^{m} a_{i}^{\left(j  \right) }x_{i} \right) - 1  \right) \ldots \left( \left( \sum_{i= 1}^{m} a_{i}^{\left( j \right)} x_{i}  \right) - \left( q_{j} - 1 \right)   \right)  }{\left( q_{j}-1 \right) !}\\
+		\end{align*}
+		has each of the \(q-1\) factors of the numerator containing terms of degree at most \(1\), we see \(\deg \left( \binom{\left( \sum_{i= 1}^{m} a_{i}^{}\left( j \right) x_{i} \right) - 1 }{q_{j}-1} \right) \le q_{j} - 1 \). Thus, \(m \le \deg \left( Q \right) = \deg \left( P \right) \le \sum_{i= 1}^{d} \left( q_{i} - 1 \right) \) as \(P\) was simply the product over such binomials. So, \(m \le \sum_{i= 1}^{d} \left( q_{i} - 1 \right) < D^{*}\left( G \right) \), a contradiction by the initial assumptions. Thus, their must in fact be a nontrivial zero-sum subsequence of \(S\), so the claim is shown.
+\end{proof}
+\section{Remarks}
+The astute reader may have noticed there are no citations or attributions in this chapter, this is because this proof has gone largely unpublished and without much fanfair. Its arguments mirror that of a paper by Christian Elsholtz in 2007, \textit{Zero-Sum Problems in Finite Abelian Groups and Affine Caps} \cite{Elsholtz_2007}, concerning a similar constant. These methods eventually made their way to David Grynkiewicz, Grynkiewicz and Elsholtz working together at TU Graz, who worked out the details but left the result unpublished. Grynkiewicz, having only reconstructed the arguments, but not verifying all claims, then gave this proof to a fellow graduate student at the University of Memphis, John Ebert, who would flesh out the proof. Ebert once again left the result unpublished, making this thesis the first  time this proof of the upper bound is known to have been published anywhere. While a different proof of the upper bound making use of group rings has been known for quite some time, these more elementary methods provide some insight into how one may approach the general davenport constant problem. Chiefly, the idea to exploit properties and theorems concerning polynomials, perhaps over the product of boolean domains, \(\{0, 1\} ^{m}\), corresponding to inclusion of a particular term proves useful in other applications. Problems naturally arise with this method, namely the lack of commutativity and the \(p\)-group structure inherent in our groups, but a general proof may aim to alleviate these problems rather than forge brand new methods.
