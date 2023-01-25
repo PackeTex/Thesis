@@ -1,2 +1,2 @@
 # Thesis
-My Master's Thesis
+The file out.pdf contains the thesis
